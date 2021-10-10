@@ -52,7 +52,7 @@
     --spannote-color: #e91e64; /* 小标签背景色（红色） */
     --emptext-color: #fe5f58; /* 几款强调型文本的颜色（红色） */
     /*--hidetextcover-color: #a1a1a1; !* 隐藏文本遮罩颜色（灰色） *!*/
-    --hidetextcover-color: #313335; /* 隐藏文本遮罩颜色（中灰） */
+    --hidetextcover-color: #3c3f41; /* 隐藏文本遮罩颜色（中灰） */
     /*--hidetext-color: #444; !* 隐藏文本颜色（黑色） *!*/
     --hidetext-color: #bacde2; /* 隐藏文本颜色（灰白） */
     /*--spanbtn-color: #44d7b6; !* 文本按钮颜色（绿色） *!*/
@@ -266,13 +266,20 @@ h6 code {
 
 
 h1 {
-    text-align: center;
-    padding-bottom: 0.3em;
+    /*text-align: center;*/
+    /*padding-bottom: 0.3em;*/
     font-size: 2.2em;
     line-height: 1.2;
-    margin: 2.4em auto 1.2em;
+    /*margin: 2.4em auto 1.2em;*/
+    /*margin: 0.18em;*/
     /*color: black;*/
 }
+
+h1::before {
+    content: 'H1' !important; /* H1 */
+    color: var(--titlebefore-color);
+}
+
 /*
 h1:after { //一级大标题下划线（为固定长度）
     content: '';
@@ -284,34 +291,35 @@ h1:after { //一级大标题下划线（为固定长度）
 }
 */
 h2 {
-    margin: 2em auto 1.4em;
-    line-height: 1.4;
+    /*margin: 2em auto 1.4em;*/
+    /*margin: 0.18em;*/
+    /*line-height: 1.4;*/
     font-size: 1.8em;
-    border-bottom: 2px solid var(--titlebefore-color);
+    /*border-bottom: 2px solid var(--titlebefore-color);*/
 }
 h2::before {
-    content: '\f863' !important; /* 风车图标 */
+    /*content: '\f863' !important; !* 风车图标 *!*/
+    content: 'H2' !important; /* H2 */
     color: var(--titlebefore-color);
-    font-family: "Font Awesome 5 Free";
 }
 
 /* h2标题前缀旋转动画 */
-@-moz-keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}@-o-keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}
-h2:before {
-    display: inline-block;
-    -webkit-animation: avatar_turn_around 1s linear infinite;
-    -moz-animation: avatar_turn_around 1s linear infinite;
-    -o-animation: avatar_turn_around 1s linear infinite;
-    -ms-animation: avatar_turn_around 1s linear infinite;
-    animation: avatar_turn_around 1s linear infinite;
-    font-size: 25px;
-    margin-left: -29px;
-}
+/*@-moz-keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}@-o-keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes avatar_turn_around{from{-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}}*/
+/*h2:before {*/
+/*    display: inline-block;*/
+/*    -webkit-animation: avatar_turn_around 1s linear infinite;*/
+/*    -moz-animation: avatar_turn_around 1s linear infinite;*/
+/*    -o-animation: avatar_turn_around 1s linear infinite;*/
+/*    -ms-animation: avatar_turn_around 1s linear infinite;*/
+/*    animation: avatar_turn_around 1s linear infinite;*/
+/*    font-size: 25px;*/
+/*    margin-left: -29px;*/
+/*}*/
 
 /* h2标题内容稍稍偏右一点 */
-h2 * {
-    margin-left: .18rem;
-}
+/*h2 * {*/
+/*    !*margin-left: .18rem;*!*/
+/*}*/
 #write>h2.md-focus:before {
     color: var(--focus-color);
 }
@@ -321,19 +329,30 @@ h2 * {
 
 h3 {
     font-size: 1.4em;
-    line-height: 1.43;
-    margin: 1.6em auto 1.2em;
-    padding-left: 9px;
-    border-left: 5px solid var(--titlebefore-color);
+    /*line-height: 1.43;*/
+    /*margin: 1.6em auto 1.2em;*/
+    /*padding-left: 9px;*/
+    /*border-left: 5px solid var(--titlebefore-color);*/
 }
+
+#write h3::before {
+    content: 'H3';
+    top: 0.18rem;
+}
+
 h4 {
-    margin-top: 1.3em;
+    /*margin-top: 1.3em;*/
     font-size: 1.2em;
-    padding-left: 6px;
-    padding-right: 6px;
-    display: inline-block;
-    border: 1px solid var(--titlebefore-color);
-    border-top: 4px solid var(--titlebefore-color);
+    /*padding-left: 6px;*/
+    /*padding-right: 6px;*/
+    /*display: inline-block;*/
+    /*border: 1px solid var(--titlebefore-color);*/
+    /*border-top: 4px solid var(--titlebefore-color);*/
+}
+
+#write h4::before {
+    content: 'H4';
+    top: 0.18rem;
 }
 
 /* 三级四级标题点击后的前缀提示图标 */
@@ -347,6 +366,62 @@ h4 {
 #write>h3.md-focus,
 #write>h4.md-focus {
     border-color: var(--focus-color);
+}
+
+#write h1::before {
+    position: absolute;
+    right: calc(100% + .75em);
+    top: 0;
+    color: var(--titlebefore-color); /* #5b5b5b */
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-variant: 'small-caps';
+    white-space: nowrap;
+    /* 文本强制不换行 */
+    border: 0;
+    line-height: 50px;
+}
+
+#write h2::before {
+    position: absolute;
+    right: calc(100% + .75em);
+    top: 0;
+    color: var(--titlebefore-color); /* #5b5b5b */
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-variant: 'small-caps';
+    white-space: nowrap;
+    /* 文本强制不换行 */
+    border: 0;
+    line-height: 45px;
+}
+
+#write h3::before {
+    position: absolute;
+    right: calc(100% + .75em);
+    top: 0;
+    color: var(--titlebefore-color); /* #5b5b5b */
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-variant: 'small-caps';
+    white-space: nowrap;
+    /* 文本强制不换行 */
+    border: 0;
+    line-height: 35px;
+}
+
+#write h4::before {
+    position: absolute;
+    right: calc(100% + .75em);
+    top: 0;
+    color: var(--titlebefore-color); /* #5b5b5b */
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-variant: 'small-caps';
+    white-space: nowrap;
+    /* 文本强制不换行 */
+    border: 0;
+    line-height: 32px;
 }
 
 #write h5::before,
@@ -460,28 +535,33 @@ h6 p {
 
 blockquote {
     /* border: 1px solid #d1f3ff; */
-    border-left: 5px solid var(--blockquoteicon-color);
-    padding: 10px 15px;
+    /*border-left: 5px solid var(--blockquoteicon-color);*/
+    border-left: 4px solid var(--blockquoteicon-color);
+    /*padding: 10px 15px;*/
+    padding: 5px 15px;
     color: #3f3f3f;
     background-color: var(--blockquotebg-color); /* white */
-    border-radius: 3px;
+    /*border-radius: 3px;*/
+    border-radius: 1px;
     position:relative;
 }
 
 /* 给提示块加info图标 */
-blockquote>* {
-    margin-left: 2rem !important;
-}
-blockquote::before {
-    content: '\f05a';
-    font-family: "Font Awesome 5 Free";
-    color: var(--blockquoteicon-color);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: larger;
-    font-weight: 600;
-}
+/*blockquote>* {*/
+/*    margin-left: 2rem !important;*/
+/*}*/
+/*blockquote::before {*/
+/*    content: '\f05a';*/
+/*    font-family: "Font Awesome 5 Free";*/
+/*    color: var(--blockquoteicon-color);*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    font-size: larger;*/
+/*    font-weight: 600;*/
+/*}*/
+
+
 /*
 blockquote:hover {
     border-left: 5px solid var(--focus-color);
@@ -1344,11 +1424,23 @@ span[alt="shake"] {
 }
 
 #write pre {
-    background: var(--tablethbg-color);
+    background: var(--detailsbg-color);
     white-space: pre-wrap;
 }
 
+/*代码块线框*/
+#write pre.ty-contain-cm {
+    white-space: normal;
+    border: 1px #555555 solid;
+}
+#writ
+
 /*图片居左*/
+p>.md-image:only-child:not(.md-img-error) img, p>img:only-child {
+    display: block;
+     margin: 0;
+}
+
 p .md-image:only-child {
     width: auto;
     text-align: left;
@@ -1463,4 +1555,10 @@ footer.ty-footer {
     z-index: 2;
     background: inherit;
     font-size: 12px
+}
+
+/*加粗*/
+strong {
+    font-weight: bold;
+    color: #ff5d52;
 }
