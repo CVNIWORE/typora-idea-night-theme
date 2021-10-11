@@ -1666,8 +1666,8 @@ mjx-container[jax="SVG"] > svg {
 /*修改字体*/
 code, pre, samp, tt {
     /*font-family: var(--monospace);*/
-    font-family: var(--code-font);
     /*font-family: var(--body-font);*/
+    font-family: var(--code-font);
 }
 
 
