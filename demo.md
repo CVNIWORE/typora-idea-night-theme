@@ -89,7 +89,7 @@ def decorator(func):
 
 <ruby>Base<rp> (</rp><rt>top</rt><rp>) </rp></ruby>、<ruby>佐天泪子<rp> (</rp><rt>xiān qún kuáng mó</rt><rp>) </rp></ruby>、<ruby>超電磁砲<rp> (</rp><rt>レールガン</rt><rp>) </rp></ruby>
 
-<img src="./temp/04154_bayoffire_2560x1440.jpg" style="zoom: 67%;" alt="shadow" />
+<img src="./temp/04154_bayoffire_2560x1440.jpg" style="zoom: 67%;" alt="" />
 
 注：按`![shadow-随便写]()`（或`<img src="..." alt="shadow-随便写">`）插入图片时会显示阴影，否则没有，类似的，设为`alt="blur-随便写"`时会有模糊效果。右键图片可以进行指定比例的缩放，任意比例可以通过`style="zoom:0.x"`属性实现
 

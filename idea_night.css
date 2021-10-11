@@ -2138,6 +2138,14 @@ span.md-block-like {
     font-style: normal;
 }
 
+/*页宽
+原页宽较窄，修改后宽度可铺满1920*1080的屏幕，通过修改max-width值即可。*/
+#write {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 20px 30px 160px;
+}
+
 
 
 
