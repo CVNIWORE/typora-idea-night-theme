@@ -1,5 +1,5 @@
-@import './source/dy/css/all.min.css';
-@import './source/zj/fonts.css';
+@import 'source/style/css/all.min.css';
+@import 'source/font/fonts.css';
 :root {
     /* dy color */
     /*--select-text-bg-color: #ffafa3; !* 文本选中背景色（粉红） *!*/
@@ -71,7 +71,7 @@
     /*--para-color: #000000; !* 段落文本颜色（黑色） *!*/
     --para-color: #bacde2; /* 段落文本颜色（偏白） */
     /* dy font */
-    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
+    --body-font: 'Source Sans Pro','JetBrains Mono','微软雅黑', 'Helvetica Neue',consoles, sans-serif; /* 全局字体 */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
 }
 
@@ -83,9 +83,11 @@ html {
 body {
     background: #2b2b2b;
     font-family: var(--body-font);
+    font-weight: normal;
     color: var(--body-color);
     -webkit-font-smoothing: antialiased;
-    line-height: 1.8rem;
+    /*line-height: 1.8rem;*/
+    line-height: 17px;
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
@@ -151,10 +153,13 @@ body>*:last-child {
     cursor:pointer;
 }
 #write a[href*="muggledy"] {
-    border-bottom:2px solid red;
+    color: var(--atext-color);
+    /*border-bottom:2px solid var(--abottom-color);*/
 }
 #write a[href*="muggledy"]:hover {
-    background-color:red;
+    color: var(--emptext-color);
+    background-color:#313335;
+    text-decoration: none;
 }
 /*
 #write a[href*="muggledy"]:hover:before {
@@ -377,7 +382,7 @@ h4 {
     color: var(--titlebefore-color); /* #5b5b5b */
     font-size: 0.8rem;
     font-weight: bold;
-    font-variant: 'small-caps';
+    font-variant: small-caps;
     white-space: nowrap;
     /* 文本强制不换行 */
     border: 0;
@@ -391,7 +396,7 @@ h4 {
     color: var(--titlebefore-color); /* #5b5b5b */
     font-size: 0.8rem;
     font-weight: bold;
-    font-variant: 'small-caps';
+    font-variant: small-caps;
     white-space: nowrap;
     /* 文本强制不换行 */
     border: 0;
@@ -405,7 +410,7 @@ h4 {
     color: var(--titlebefore-color); /* #5b5b5b */
     font-size: 0.8rem;
     font-weight: bold;
-    font-variant: 'small-caps';
+    font-variant: small-caps;
     white-space: nowrap;
     /* 文本强制不换行 */
     border: 0;
@@ -419,7 +424,7 @@ h4 {
     color: var(--titlebefore-color); /* #5b5b5b */
     font-size: 0.8rem;
     font-weight: bold;
-    font-variant: 'small-caps';
+    font-variant: small-caps;
     white-space: nowrap;
     /* 文本强制不换行 */
     border: 0;
@@ -434,7 +439,7 @@ h4 {
     color: var(--titlebefore-color); /* #5b5b5b */
     font-size: 0.8rem;
     font-weight: bold;
-    font-variant: 'small-caps';
+    font-variant: small-caps;
     white-space: nowrap;
     /* 文本强制不换行 */
     border: 0;
@@ -1438,7 +1443,6 @@ span[alt="shake"] {
     white-space: normal;
     border: 1px #555555 solid;
 }
-#writ
 
 /*图片居左*/
 p>.md-image:only-child:not(.md-img-error) img, p>img:only-child {
@@ -1475,7 +1479,7 @@ kbd {
     background: #3c3f41;
     border: 1px solid #555555;
     border-radius: 3px;
-    box-shadow: 0 1px 0 rgb(12 13 14 / 20%), 0 0 0 0px #fff inset;
+    box-shadow: 0 1px 0 #0c0d0e33, 0 0 0 0px #fff inset;
     white-space: nowrap;
     vertical-align: middle;
 }
@@ -1623,7 +1627,6 @@ mjx-container[jax="SVG"] > svg {
             45deg
     );
     position: absolute;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
     border-radius: 2px;
     z-index: 19;
 }
@@ -1658,7 +1661,6 @@ mjx-container[jax="SVG"] > svg {
     display: inline-block;
     margin: 2px 0;
     background: var(--active-file-border-color);
-    /*box-shadow: inset 0 0 0 1px rgb(16 22 26 / 7%), inset 0 -1px 0 rgb(16 22 26 / 0%);*/
     cursor: pointer;
     border: none;
 }
@@ -1668,6 +1670,7 @@ code, pre, samp, tt {
     /*font-family: var(--monospace);*/
     /*font-family: var(--body-font);*/
     font-family: var(--code-font);
+    font-size: medium;
 }
 
 

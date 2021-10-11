@@ -1,5 +1,5 @@
-@import './source/dy/css/all.min.css';
-@import './source/zj/fonts.css';
+@import 'source/style/css/all.min.css';
+@import 'source/font/fonts.css';
 :root {
     /* dy color */
     --select-text-bg-color: #ffafa3; /* 文本选中背景色（粉红） */
