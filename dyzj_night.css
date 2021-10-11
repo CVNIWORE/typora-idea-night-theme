@@ -30,11 +30,14 @@
     /*--tablethbg-color: #f4fcff; !* 表格表头背景色（淡蓝） *!*/
     --tablethbg-color: #2b2b2b; /* 表格表头背景色（偏暗） */
     /*--toc-color: #00a0a0; !* 目录颜色（绿色） *!*/
-    --toc-color: #69a0d8; /* 目录颜色（淡蓝色） */
+    --toc-color: #4f8ffa; /* 目录颜色（淡蓝色） */
+    /*--toc-color: #69a0d8; !* 目录颜色（淡蓝色） *!*/
     /*--atext-color: black; !* 超链接文本颜色（黑色） *!*/
-    --atext-color: #6c9ffd; /* 超链接文本颜色（淡蓝色） */
+    --atext-color: #4f8ffa; /* 超链接文本颜色（淡蓝色） */
+    /*--atext-color: #6c9ffd; !* 超链接文本颜色（淡蓝色） *!*/
     /*--abottom-color: #81d8cf; !* 超链接下划线颜色（青色） *!*/
-    --abottom-color: #6c9ffd; /* 超链接下划线颜色（淡蓝色） */
+    --abottom-color: #4f8ffa; /* 超链接下划线颜色（淡蓝色） */
+    /*--abottom-color: #6c9ffd; !* 超链接下划线颜色（淡蓝色） *!*/
     /*--code-color: #ff3502; !* 行内代码前景色（红色） *!*/
     --code-color: #ff0058; /* 行内代码前景色（暗红） */
     /*--codebg-color: #f8f5ec; !* 行内代码背景色（淡红） *!*/
@@ -71,7 +74,6 @@
     --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
 }
-
 
 
 html {
@@ -138,14 +140,14 @@ body>*:last-child {
     padding: 0 4px;
     /*padding-top: 2px;*/
     transition: .3s;
-    color: var(--atext-color);
+    /*color: var(--atext-color);*/
     text-decoration: none;
 }
 #write a:hover {
     border-radius:6px;
     border-bottom:2px solid transparent;
-    background-color:var(--abottom-color);
-    color:#ffffffe6;
+    /*background-color:#f44336;*/
+    /*color:#ffffffe6;*/
     cursor:pointer;
 }
 #write a[href*="muggledy"] {
@@ -165,7 +167,7 @@ body>*:last-child {
 */
 #write h2 a, #write h4 a, #write a[alt="null"]{
     border-bottom: none !important;
-    /*color: var(--code-color);*/
+    color: var(--code-color);
 }
 h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
     content: none !important;
@@ -681,7 +683,8 @@ table tr:hover {
 #write code {
     padding: 2px 4px;
     border-radius: 2px;
-    font-family: var(--code-font); /*font-family: '微软雅黑';*/
+    /*font-family: '微软雅黑';*/
+    font-family: var(--code-font);
     font-size: 0.9rem;
     color: var(--code-color);
     background-color: var(--codebg-color);
@@ -1322,6 +1325,8 @@ span[alt="shake"] {
     --active-file-text-color: inherit;
     --item-hover-bg-color: var(--focus-color);
     --item-hover-text-color: inherit;
+    --md-char-color: #ef5350;
+    --active-file-border-color: #777;
 }
 
 
@@ -1330,10 +1335,10 @@ span[alt="shake"] {
     border-color: var(--split-color);
 }
 
-.md-content {
-    display: none;
-    color: var(--atext-color);
-}
+/*.md-content {*/
+/*    display: none;*/
+/*    color: var(--atext-color);*/
+/*}*/
 
 .md-rawblock-control:not(.md-rawblock-tooltip) {
     background: var(--tablethbg-color);
@@ -1345,7 +1350,7 @@ span[alt="shake"] {
 
 .dropdown-menu {
     background-color: inherit;
-    background-color: var(--bg-color);
+    background-color: #3c3f41;
 }
 
 .context-menu.dropdown-menu>.active>a, .context-menu.dropdown-menu>li>a:hover, .menu-style-btn.active {
@@ -1491,13 +1496,25 @@ kbd {
     }
 }
 
+/*偏好设置-外观-重置、主题文件夹、获取主题线框*/
+.btn-default, .btn-primary {
+    border-radius: 0;
+    padding: 6px 12px;
+    border: 1px solid #555555;
+    background: transparent;
+    box-shadow: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 /*大纲*/
-/*大纲背景*/
+/*大纲背景和右边线框*/
 .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
     display: block;
     left: 0;
     transition: left .3s;
     background: var(--tablethbg-color);
+    border-color: #555;
 }
 
 /*大纲选择选项背景*/
@@ -1562,3 +1579,96 @@ strong {
     font-weight: bold;
     color: #ff5d52;
 }
+
+/*行内公式编辑颜色*/
+.md-inline-math script {
+    color: #66b175;
+}
+
+/*行内符号颜色*/
+.md-meta {
+    display: none;
+    color: #BBB;
+    color: var(--md-char-color);
+}
+
+/*行内公式显示颜色*/
+mjx-container[jax="SVG"] > svg {
+    color: #45b97c;
+    overflow: visible;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+/*行内公式编辑框背景颜色*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 4px;
+    opacity: .95;
+    margin-top: -2px;
+    line-height: 1.2em;
+    text-align: center;
+    background: #3c3f41;
+}
+
+/*行内公式编辑框菱形背景颜色*/
+.md-hover-tip .md-arrow:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #3c3f41;
+    -webkit-transform: rotate(
+            45deg
+    );
+    transform: rotate(
+            45deg
+    );
+    position: absolute;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    border-radius: 2px;
+    z-index: 19;
+}
+
+/*修改a标签样式*/
+/* 未被访问的链接 */
+.md-content,a:link {
+    color: var(--atext-color);
+}
+
+/* 已被访问的链接 */
+.md-content,a:visited {
+    color: #f44336;
+    background-color: #313335;
+}
+
+/* 将鼠标悬停在链接上 */
+.md-content,a:hover {
+    color: #fe5f58;
+    background-color: #313335;
+}
+
+/* 被选择的链接 */
+.md-content,a:active {
+    color: #4f8ffa;
+    /*background-color: #3c3f41;*/
+    background-color: #313335;
+}
+
+/*右键菜单4个按钮*/
+.menu-item-container a.menu-style-btn {
+    display: inline-block;
+    margin: 2px 0;
+    background: var(--active-file-border-color);
+    /*box-shadow: inset 0 0 0 1px rgb(16 22 26 / 7%), inset 0 -1px 0 rgb(16 22 26 / 0%);*/
+    cursor: pointer;
+    border: none;
+}
+
+/*修改字体*/
+code, pre, samp, tt {
+    /*font-family: var(--monospace);*/
+    font-family: var(--code-font);
+    /*font-family: var(--body-font);*/
+}
+
+
+
