@@ -59,9 +59,8 @@
 
 ## 样式预览
 
-![](./temp/bee.png)
+![](./temp/主题样式.png)
 
 你可以在下载的“demo.md”中查阅以上内容，或者前往<a href="https://typora-dyzj-theme.vercel.app/">地址</a>在线预览
 
-<font>致谢</font>
-：[zj主题作者](https://github.com/Theigrams/My-Typora-Themes) 、[butterfly主题](https://github.com/jerryc127/hexo-theme-butterfly)
+<font>致谢</font> ：[zj主题作者](https://github.com/Theigrams/My-Typora-Themes) 、[butterfly主题](https://github.com/jerryc127/hexo-theme-butterfly)

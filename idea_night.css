@@ -1,5 +1,5 @@
-@import 'source/style/css/all.min.css';
-@import 'source/font/fonts.css';
+@import './typora-idea-night-theme/source/style/css/all.min.css';
+@import './typora-idea-night-theme/source/font/fonts.css';
 :root {
     /* dy color */
     /*--select-text-bg-color: #ffafa3; !* 文本选中背景色（粉红） *!*/
@@ -526,7 +526,7 @@ h6 p {
 
 #write ol>li>*,
 #write ul>li>* {
-    color: #333;
+    /*color: #333;*/
     font-weight: normal;
 }
 
@@ -635,8 +635,8 @@ table tr:hover {
 
 #write .CodeMirror pre {
     font-family: var(--code-font);
-    font-size: 0.95em;
-    padding-left: 12px;
+    /*font-size: 0.95em;*/
+    /*padding-left: 12px;*/
 }
 .md-fences {
     background: var(--codeblockbg-color);
@@ -685,7 +685,7 @@ table tr:hover {
 /** 行内代码 **/
 
 
-#write code {
+#write code,div code {
     padding: 2px 4px;
     border-radius: 2px;
     /*font-family: '微软雅黑';*/
@@ -1089,7 +1089,6 @@ footer {
 
 /* 列表子项上下间隔调整 */
 #write ul li *, #write ol li *, #write .ul .li *, #write .ol .li * {
-    color: var(--body-color);
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -1426,6 +1425,10 @@ span[alt="shake"] {
     color: var(--titlebefore-color);
 }
 
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom {
+    color: var(--titlebefore-color);
+}
+
 /*代码块行号线、行号背景*/
 .CodeMirror-gutters {
     border-right: 1px solid #555555;
@@ -1530,6 +1533,12 @@ kbd {
 /*大纲文件分割线颜色*/
 .file-list-item {
     border-color: #555555;
+}
+/*大纲下查找下的细线颜色*/
+.ty-sidebar-search-panel {
+    padding: 16px;
+    padding-top: 0;
+    border-bottom: #555555;
 }
 
 /*退出源代码模式背景*/
@@ -1670,8 +1679,465 @@ code, pre, samp, tt {
     /*font-family: var(--monospace);*/
     /*font-family: var(--body-font);*/
     font-family: var(--code-font);
-    font-size: medium;
+    font-size: large;
 }
+
+/*无序列表*/
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+
+
+
+/*==================自定义修改的===========================================================================*/
+
+/*新添加*/
+:root {
+    --bg-color: var(--tablethbg-color);
+    --primary-color: #428bca;
+    --monospace: "Lucida Console", Consolas, "Courier", monospace;
+    --text-color: var(--body-color);
+    --active-file-bg-color: var(--focus-color);
+    --active-file-text-color: inherit;
+    --item-hover-bg-color: var(--focus-color);
+    --item-hover-text-color: inherit;
+    --md-char-color: #ef5350;
+    --active-file-border-color: #777;
+}
+
+
+#write div.md-toc-tooltip {
+    background-color: var(--tablethbg-color);
+    border-color: var(--split-color);
+}
+
+/*.md-content {*/
+/*    display: none;*/
+/*    color: var(--atext-color);*/
+/*}*/
+
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    background: var(--tablethbg-color);
+    line-height: 30px;
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip, .md-rawblock:hover > .md-rawblock-container, .md-rawblock:hover > .md-rawblock-tooltip {
+    background: var(--tablethbg-color);
+}
+
+.dropdown-menu {
+    background-color: inherit;
+    background-color: #3c3f41;
+}
+
+.context-menu.dropdown-menu > .active > a, .context-menu.dropdown-menu > li > a:hover, .menu-style-btn.active {
+    background-color: var(--focus-color);
+    color: var(--body-color);
+}
+
+/*代码块关键字或标签的颜色*/
+/*html*/
+.cm-s-inner .cm-tag {
+    color: #ff631f;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #d6d6d6;
+}
+
+.cm-s-inner .cm-string {
+    color: #98cc20;
+}
+
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment {
+    color: #a50;
+}
+
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment {
+    color: #499c54;
+}
+
+/*Java*/
+.cm-s-inner .cm-meta {
+    color: #ffeb3b;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #ff631f;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #03a9f4;
+}
+
+.cm-s-inner .cm-def {
+    color: #ffc66d;
+}
+
+.cm-s-inner .cm-variable {
+    color: var(--body-color);
+}
+
+.cm-s-inner .cm-operator {
+    color: var(--titlebefore-color);
+}
+
+.cm-s-inner .cm-property {
+    color: #ff631f;
+}
+
+.cm-s-inner .cm-number {
+    color: #ffff00c7;
+}
+
+.cm-s-inner .cm-header, .cm-s-inner.cm-header {
+    color: var(--atext-color);
+}
+
+.cm-s-inner .cm-builtin {
+    color: var(--titlebefore-color);
+}
+
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom {
+    color: var(--titlebefore-color);
+}
+
+.cm-s-inner .cm-qualifier {
+    color: var(--taskfocus-color);
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: var(--toc-color);
+}
+
+
+/*代码块行号线、行号背景*/
+.CodeMirror-gutters {
+    border-right: 1px solid #555555;
+    background: inherit;
+    white-space: nowrap;
+}
+
+#write pre {
+    background: var(--detailsbg-color);
+    white-space: pre-wrap;
+}
+
+/*代码块线框*/
+#write pre.ty-contain-cm {
+    white-space: normal;
+    border: 1px #555555 solid;
+}
+
+/*图片居左*/
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child {
+    display: block;
+    margin: 0;
+}
+
+p .md-image:only-child {
+    width: auto;
+    text-align: left;
+}
+
+/*绘图*/
+/*绘图标题*/
+#mermaidChart0 .pieTitleText {
+    text-anchor: middle;
+    font-size: 25px;
+    fill: var(--emptext-color);
+    font-family: sans-serif;
+}
+
+#mermaidChart0 .legend text {
+    fill: var(--atext-color);
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+/*kbd键*/
+kbd {
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-size: .8em;
+    color: var(--body-color);
+    background: #3c3f41;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #0c0d0e33, 0 0 0 0px #fff inset;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/*偏好设置面板*/
+
+/*修改偏好设置-导出-选项面板背景颜色
+路径：安装路径\Typora\resources\page-dist\static\css --> Preferences.962926a4.caf99372.chunk.css
+修改该文件的 background 属性，改为如下：background: #3c3f41;
+*/
+@media (prefers-color-scheme: dark) {
+    .export-detail, .export-item.active, .export-items-list-control {
+        background: #3c3f41; /*修改此行代码*/
+    }
+
+    textarea {
+        background: var(--bg-color);
+    }
+}
+
+/*偏好设置-外观-重置、主题文件夹、获取主题线框*/
+.btn-default, .btn-primary {
+    border-radius: 0;
+    padding: 6px 12px;
+    border: 1px solid #555555;
+    background: transparent;
+    box-shadow: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/*大纲*/
+/*大纲背景和右边线框*/
+.typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
+    display: block;
+    left: 0;
+    transition: left .3s;
+    background: var(--tablethbg-color);
+    border-color: #555;
+}
+
+/*大纲选择选项背景*/
+.outline-item:hover {
+    /*border-color: #f5f5f5;*/
+    background-color: var(--item-hover-bg-color);
+}
+
+/*大纲文件分割线颜色*/
+.file-list-item {
+    border-color: #555555;
+}
+
+/*大纲下查找下的细线颜色*/
+.ty-sidebar-search-panel {
+    padding: 16px;
+    padding-top: 0;
+    border-bottom: #555555;
+}
+
+/*退出源代码模式背景*/
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: #3c3f41;
+    padding-left: 10px;
+    margin-left: -2px;
+}
+
+/*页脚部分*/
+footer.ty-footer {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: inherit;
+    font-size: 12px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-right: 4px;
+    transition: .2s;
+    z-index: 2;
+    height: 28px;
+    border-top: 1px solid #555555;
+}
+
+.pin-outline footer.ty-footer {
+    background-color: inherit;
+    /*border-top: 1px solid #ddd;*/
+    border-top: 1px solid #555555;
+    right: 0
+}
+
+.sidebar-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    /*border-top: 1px solid #ddd;*/
+    border-top: 1px solid #555555;
+    /*border-top: var(--window-border);*/
+    z-index: 2;
+    background: inherit;
+    font-size: 12px
+}
+
+/*加粗*/
+strong {
+    font-weight: bold;
+    color: #ff5d52;
+}
+
+/*行内公式编辑颜色*/
+.md-inline-math script {
+    color: #66b175;
+}
+
+/*行内符号颜色*/
+.md-meta {
+    display: none;
+    color: #BBB;
+    color: var(--md-char-color);
+}
+
+/*行内公式显示颜色*/
+mjx-container[jax="SVG"] > svg {
+    color: #45b97c;
+    overflow: visible;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+/*行内公式编辑框背景颜色*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 4px;
+    opacity: .95;
+    margin-top: -2px;
+    line-height: 1.2em;
+    text-align: center;
+    background: #3c3f41;
+}
+
+/*行内公式编辑框菱形背景颜色*/
+.md-hover-tip .md-arrow:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #3c3f41;
+    -webkit-transform: rotate(
+            45deg
+    );
+    transform: rotate(
+            45deg
+    );
+    position: absolute;
+    border-radius: 2px;
+    z-index: 19;
+}
+
+/*修改a标签样式*/
+/* 未被访问的链接 */
+.md-content, a:link {
+    color: var(--atext-color);
+}
+
+/* 已被访问的链接 */
+.md-content, a:visited {
+    color: #f44336;
+    background-color: #313335;
+}
+
+/* 将鼠标悬停在链接上 */
+.md-content, a:hover {
+    color: #fe5f58;
+    background-color: #313335;
+}
+
+/* 被选择的链接 */
+.md-content, a:active {
+    color: #4f8ffa;
+    /*background-color: #3c3f41;*/
+    background-color: #313335;
+}
+
+/*右键菜单4个按钮*/
+.menu-item-container a.menu-style-btn {
+    display: inline-block;
+    margin: 2px 0;
+    background: var(--active-file-border-color);
+    cursor: pointer;
+    border: none;
+}
+
+/*无序列表*/
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+/*脚注*/
+
+/*[^ 左边括号*/
+.md-def-name:before {
+    font-weight: 400;
+    content: '[';
+    position: absolute;
+    left: 0;
+    color: #2196f3;
+}
+/*] 右边括号*/
+.md-def-name:after {
+    font-weight: 400;
+    content: '] :';
+    position: absolute;
+    right: 0;
+    color: #2196f3;
+}
+
+/*中间脚注文字-点击之前*/
+.md-def-name {
+    font-weight: 700;
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    padding-left: 2ch;
+    padding-right: 2.5ch;
+    text-align: center;
+    color: #2196f3;
+}
+
+/*右边脚注前引号 "-点击之前*/
+.md-def-title:before {
+    color: #C7C5C5;
+    /* color: var(--md-char-color); */
+    content: '"';
+    left: 0;
+}
+
+/*右边脚注后引号 "-点击之前*/
+.md-def-title:after {
+    color: #C7C5C5;
+    /* color: var(--md-char-color); */
+    content: '"';
+    right: 0;
+}
+
+/*右边脚注文字-点击之后*/
+span.md-block-like {
+    color: #ef5350;
+}
+
+/*脚注右边链接*/
+.md-def-url {
+    text-decoration: underline;
+    color: #2196f3;
+}
+
+/*点击脚注文字*/
+.md-blockmeta {
+    color: #ef5350;
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 
 
