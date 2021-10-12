@@ -2147,5 +2147,14 @@ span.md-block-like {
 }
 
 
+/*导出-image-导出后选项列表背景*/
+select, select option {
+    background: var(--bg-color);
+    font-size: 0.9rem;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    vertical-align: baseline;
+}
+
 
 
