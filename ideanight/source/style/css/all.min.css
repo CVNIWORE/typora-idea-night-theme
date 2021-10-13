@@ -9,7 +9,7 @@
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    line-height: 1.5
+    line-height: inherit;
 }
 
 .fa-lg {
