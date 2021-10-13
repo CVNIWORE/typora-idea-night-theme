@@ -5,7 +5,8 @@
 .fa, .fab, .fad, .fal, .far, .fas {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    display: inline-block;
+    /*display: inline-block;*/
+    display: table-column;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;

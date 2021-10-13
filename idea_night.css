@@ -1,5 +1,8 @@
-@import './typora-idea-night-theme/source/style/css/all.min.css';
-@import './typora-idea-night-theme/source/font/fonts.css';
+@import './ideanight/source/style/css/all.min.css';
+@import './ideanight/source/font/fonts.css';
+@import './ideanight/source/font/font-awesome-4.7.0/css/font-awesome.min.css';
+
+
 :root {
     /* dy color */
     /*--select-text-bg-color: #ffafa3; !* 文本选中背景色（粉红） *!*/
@@ -178,7 +181,9 @@ h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
     content: none !important;
 }
 
-/* 修复空链接（标题锚点）显示底部下划线的问题（padding宽度引起的问题），但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，这将会使得链接“消失” */
+/* 修复空链接（标题锚点）显示底部下划线的问题（padding宽度引起的问题），
+但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，
+这将会使得链接“消失” */
 #write a:empty, #write a[alt="none"] {
     padding-left:0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
     padding-right:0px;
@@ -1477,7 +1482,12 @@ span[alt="shake"] {
     white-space: pre-wrap;
 }
 
-/*选择的代码块*/
+/*选择的代码块，解决选择的代码块本身颜色被覆盖的问题
+在 Typora安装目录/resources//style/base-control.css 文件中，
+搜索 .CodeMirror-selected, .CodeMirror-selectedtext ，
+注释掉 color: var(--select-text-font-color) !important; 这一行代码，
+改为如下：
+*/
 .CodeMirror-selected, .CodeMirror-selectedtext {
     background: #B5D6FC;
     background: var(--select-text-bg-color)!important;

@@ -1,10 +1,8 @@
-/*
-!*.md
-!*.css
-!dyzj.css
-!.gitignore
-!source/
-!readme.md
-!demo.md
-!temp/
-!index.html
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
