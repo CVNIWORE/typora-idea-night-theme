@@ -665,8 +665,8 @@ table tr:hover {
 
 #write .CodeMirror pre {
     font-family: var(--code-font);
-    /*font-size: 0.95em;*/
-    /*padding-left: 12px;*/
+    font-size: 0.95em;
+    padding-left: 6px;
 }
 .md-fences {
     background: var(--codeblockbg-color);
@@ -1489,9 +1489,8 @@ span[alt="shake"] {
 改为如下：
 */
 .CodeMirror-selected, .CodeMirror-selectedtext {
-    background: #B5D6FC;
     background: var(--select-text-bg-color)!important;
-    /*color: var(--select-text-font-color)!important;*/
+    /*color: var(--select-text-font-color)!important;*/  /*注释掉这一行代码*/
     text-shadow: none;
 }
 
@@ -1674,6 +1673,12 @@ li>:first-child:hover {
 /*    font-weight: 700;*/
 /*    background: #4b6eaf;*/
 /*}*/
+
+
+/*大纲-文件下的右箭头字体图标对齐右边的文件夹字体图标*/
+.file-node-collapsed > .file-node-content .fa-caret-right {
+    display: flex;
+}
 
 /*退出源代码模式背景*/
 .typora-sourceview-on #toggle-sourceview-btn {
