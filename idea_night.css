@@ -1475,8 +1475,9 @@ span[alt="shake"] {
     white-space: nowrap;
 }
 
+/*代码块背景*/
 #write pre {
-    background: #6d757a;
+    background: var(--detailsbg-color);
     white-space: pre-wrap;
 }
 
