@@ -1,7 +1,5 @@
 @import './ideanight/source/style/css/all.min.css';
 @import './ideanight/source/font/fonts.css';
-@import './ideanight/source/font/font-awesome-4.7.0/css/font-awesome.min.css';
-
 
 :root {
     /* dy color */
@@ -1402,7 +1400,7 @@ span[alt="shake"] {
 }
 
 .cm-s-inner .cm-attribute {
-    color: #d6d6d6;
+    color: #a979ff;
 }
 
 .cm-s-inner .cm-string {
@@ -1689,7 +1687,8 @@ li>:first-child:hover {
 
 /*页脚部分*/
 footer.ty-footer {
-    display: none;
+    /*display: none;*/
+    display: inherit;
     position: fixed;
     left: 0;
     right: 0;
@@ -1740,7 +1739,7 @@ strong {
 /*行内符号颜色*/
 .md-meta {
     display: none;
-    color: #BBB;
+    /*color: #BBB;*/
     color: var(--md-char-color);
 }
 
@@ -1806,7 +1805,7 @@ mjx-container[jax="SVG"] > svg {
 
 /*右键菜单4个按钮*/
 .menu-item-container a.menu-style-btn {
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 2px 0;
     background: var(--active-file-border-color);
     cursor: pointer;
@@ -1854,7 +1853,7 @@ code, pre, samp, tt {
 .md-def-name {
     font-weight: 700;
     font-size: 1em;
-    display: inline-block;
+    /*display: inline-block;*/
     position: relative;
     padding-left: 2ch;
     padding-right: 2.5ch;
@@ -1899,7 +1898,8 @@ span.md-block-like {
 /*页宽
 原页宽较窄，修改后宽度可铺满1920*1080的屏幕，通过修改max-width值即可。*/
 #write {
-    max-width: 1920px;
+    /*max-width: 1920px;*/
+    max-width: 720px;
     margin: 0 auto;
     padding: 20px 30px 160px;
 }
@@ -1923,6 +1923,11 @@ select, select option {
 /*源码标题*/
 .cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property {
     color: #ff5722;
+}
+
+/*!*启用源码模式显示*!*/
+element.style {
+    display: flex;
 }
 
 
