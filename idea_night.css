@@ -72,7 +72,7 @@
     /*--para-color: #000000; !* 段落文本颜色（黑色） *!*/
     --para-color: #bacde2; /* 段落文本颜色（偏白） */
     /* dy font */
-    --body-font: 'Source Sans Pro','JetBrains Mono','微软雅黑', 'Helvetica Neue',consoles, sans-serif; /* 全局字体 */
+    --body-font: 'Source Sans Pro', 'JetBrains Mono', '微软雅黑', 'Helvetica Neue', consoles, sans-serif; /* 全局字体 */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
 }
 
@@ -120,48 +120,51 @@ body {
     color: var(--para-color);
 }
 
-#write>ul:first-child,
-#write>ol:first-child {
+#write > ul:first-child,
+#write > ol:first-child {
     margin-top: 30px;
 }
 
-body>*:first-child {
+body > *:first-child {
     margin-top: 0 !important;
 }
 
-body>*:last-child {
+body > *:last-child {
     margin-bottom: 0 !important;
 }
-
 
 
 /** 超链接 **/
 
 
 #write a {
-    border-bottom:2px solid var(--abottom-color);
+    border-bottom: 2px solid var(--abottom-color);
     padding: 0 4px;
     /*padding-top: 2px;*/
     transition: .3s;
     /*color: var(--atext-color);*/
     text-decoration: none;
 }
+
 #write a:hover {
-    border-radius:6px;
-    border-bottom:2px solid transparent;
+    border-radius: 6px;
+    border-bottom: 2px solid transparent;
     /*background-color:#f44336;*/
     /*color:#ffffffe6;*/
-    cursor:pointer;
+    cursor: pointer;
 }
+
 #write a[href*="muggledy"] {
     color: var(--atext-color);
     /*border-bottom:2px solid var(--abottom-color);*/
 }
+
 #write a[href*="muggledy"]:hover {
     color: var(--emptext-color);
-    background-color:#313335;
+    background-color: #313335;
     text-decoration: none;
 }
+
 /*
 #write a[href*="muggledy"]:hover:before {
     content:"(大麻瓜) ";
@@ -171,11 +174,12 @@ body>*:last-child {
     font-size: 15px;
 }
 */
-#write h2 a, #write h4 a, #write a[alt="null"]{
+#write h2 a, #write h4 a, #write a[alt="null"] {
     border-bottom: none !important;
     color: var(--code-color);
 }
-h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
+
+h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before {
     content: none !important;
 }
 
@@ -183,15 +187,16 @@ h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
 但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，
 这将会使得链接“消失” */
 #write a:empty, #write a[alt="none"] {
-    padding-left:0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
-    padding-right:0px;
+    padding-left: 0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
+    padding-right: 0px;
 }
+
 #write a[alt="none"] span {
     display: none; /*消除空格或其他内容*/
 }
 
 /* 无样式超链接 */
-#write a[alt="null"]:hover{
+#write a[alt="null"]:hover {
     background-color: inherit;
     border-radius: 0px;
     color: var(--atext-color);
@@ -207,21 +212,25 @@ h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
     border-bottom: none;
     color: var(--toc-color);
 }
+
 .md-toc {
     margin-top: 50px;
     padding-bottom: 20px;
 }
-#write a.md-toc-inner:hover{
+
+#write a.md-toc-inner:hover {
     text-decoration: underline;
     /* border-bottom: 2px solid var(--toc-color);text-decoration: none; */
     color: var(--toc-color);
     background-color: inherit;
     border-radius: 0px;
 }
-#write a.md-toc-inner code{
+
+#write a.md-toc-inner code {
     color: var(--toc-color);
     background-color: #f3f4f4;
 }
+
 #write a.md-toc-inner:hover:before {
     content: none !important;
 }
@@ -254,22 +263,26 @@ h6:hover a.anchor {
 h1 code {
     font-size: inherit !important;
 }
+
 h2 code {
     font-size: inherit !important;
 }
+
 h3 code {
     font-size: inherit !important;
 }
+
 h4 code {
     font-size: inherit !important;
 }
+
 h5 code {
     font-size: inherit !important;
 }
+
 h6 code {
     font-size: inherit !important;
 }
-
 
 
 /** 不同级别标题样式 **/
@@ -307,6 +320,7 @@ h2 {
     font-size: 1.8em;
     /*border-bottom: 2px solid var(--titlebefore-color);*/
 }
+
 h2::before {
     /*content: '\f863' !important; !* 风车图标 *!*/
     content: 'H2' !important; /* H2 */
@@ -330,10 +344,11 @@ h2::before {
 /*h2 * {*/
 /*    !*margin-left: .18rem;*!*/
 /*}*/
-#write>h2.md-focus:before {
+#write > h2.md-focus:before {
     color: var(--focus-color);
 }
-#write>h2.md-focus {
+
+#write > h2.md-focus {
     border-bottom-color: var(--focus-color);
 }
 
@@ -366,15 +381,16 @@ h4 {
 }
 
 /* 三级四级标题点击后的前缀提示图标 */
-#write>h3.md-focus:before,
-#write>h4.md-focus:before {
+#write > h3.md-focus:before,
+#write > h4.md-focus:before {
     width: auto;
     height: auto;
     background-color: var(--focus-color);
     color: #ffffff;
 }
-#write>h3.md-focus,
-#write>h4.md-focus {
+
+#write > h3.md-focus,
+#write > h4.md-focus {
     border-color: var(--focus-color);
 }
 
@@ -447,22 +463,25 @@ h4 {
     /* 文本强制不换行 */
     border: 0;
 }
-#write h5.md-focus:before, #write h6.md-focus:before{
+
+#write h5.md-focus:before, #write h6.md-focus:before {
     color: var(--focus-color);
 }
+
 #write h5, #write h6 {
     /* margin-left: 2em; */
     font-size: 1rem;
 }
+
 #write h5::before {
     content: 'H5';
     top: 0.18rem;
 }
+
 #write h6::before {
     content: 'H6';
     top: 0.18rem;
 }
-
 
 
 p,
@@ -474,30 +493,30 @@ table {
     margin: 0.8em 0;
 }
 
-li>ol,
-li>ul {
+li > ol,
+li > ul {
     margin: 0 0;
 }
 
-body>h2:first-child {
+body > h2:first-child {
     margin-top: 0;
     padding-top: 0;
 }
 
-body>h1:first-child {
+body > h1:first-child {
     margin-top: 0;
     padding-top: 0;
 }
 
-body>h1:first-child+h2 {
+body > h1:first-child + h2 {
     margin-top: 0;
     padding-top: 0;
 }
 
-body>h3:first-child,
-body>h4:first-child,
-body>h5:first-child,
-body>h6:first-child {
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
     margin-top: 0;
     padding-top: 0;
 }
@@ -527,17 +546,16 @@ h6 p {
     margin: .5rem 0;
 }
 
-#write ol>li>*,
-#write ul>li>* {
+#write ol > li > *,
+#write ul > li > * {
     /*color: #333;*/
     font-weight: normal;
 }
 
-#write ol>li>*:not(ol):not(ul),
-#write ul>li>*:not(ol):not(ul) {
+#write ol > li > *:not(ol):not(ul),
+#write ul > li > *:not(ol):not(ul) {
     padding-left: .25rem;
 }
-
 
 
 /** 引用块（提示型） **/
@@ -553,7 +571,7 @@ blockquote {
     background-color: var(--blockquotebg-color); /* white */
     /*border-radius: 3px;*/
     border-radius: 1px;
-    position:relative;
+    position: relative;
 }
 
 /* 给提示块加info图标 */
@@ -598,6 +616,7 @@ table {
     text-align: left;
     text-indent: initial;
 }
+
 /*
 table tr {
     border-top: 1px solid var(--main-6);
@@ -639,22 +658,26 @@ table tr th {
     margin: 0;
     padding: 6px 13px;
 }
+
 table tr td {
     border: 1px solid var(--tableborder-color);
     text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
+
 table tr th:first-child,
 table tr td:first-child {
     margin-top: 0;
 }
+
 table tr th:last-child,
 table tr td:last-child {
     margin-bottom: 0;
 }
+
 table tr:hover {
-  background-color: var(--tablefocusrow-color);
+    background-color: var(--tablefocusrow-color);
 }
 
 
@@ -666,6 +689,7 @@ table tr:hover {
     font-size: 0.95em;
     padding-left: 6px;
 }
+
 .md-fences {
     background: var(--codeblockbg-color);
     border-radius: 3px;
@@ -704,7 +728,7 @@ table tr:hover {
 
 /* 修复行间公式在手机端屏幕宽度较小时公式极端缩小的问题，但是打印为pdf时仍要设为100%，否则有滚动条 */
 @media only screen and (max-width: 800px) {
-    .MathJax_SVG_Display svg{
+    .MathJax_SVG_Display svg {
         max-width: inherit !important;
     }
 }
@@ -713,7 +737,7 @@ table tr:hover {
 /** 行内代码 **/
 
 
-#write code,div code {
+#write code, div code {
     padding: 2px 4px;
     border-radius: 2px;
     /*font-family: '微软雅黑';*/
@@ -733,7 +757,7 @@ table tr:hover {
 }
 
 /* 脚注上标链接禁止显示下划线样式 */
-#write sup.md-footnote a{
+#write sup.md-footnote a {
     color: inherit !important; /* 鼠标hover时禁止颜色发生变化 */
     border-bottom: none;
     padding: 1px;
@@ -792,7 +816,6 @@ hr { /* 来自next主题样式 */
 }
 
 
-
 #write del {
     padding: 1px 2px;
 }
@@ -807,16 +830,16 @@ hr { /* 来自next主题样式 */
 }
 
 
-
 /** 任务列表小方框 **/
 
 
-.md-task-list-item>input {
+.md-task-list-item > input {
     margin-left: -1.3em;
     margin-top: 0.4rem;
     -webkit-appearance: none;
 }
-.md-task-list-item>input:before {
+
+.md-task-list-item > input:before {
     content: '';
     display: inline-block;
     width: 0.875rem;
@@ -831,8 +854,9 @@ hr { /* 来自next主题样式 */
     margin-top: -0.4rem;
     transition: all 0.2s linear;
 }
-.md-task-list-item>input:checked:before,
-.md-task-list-item>input[checked]:before {
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
     content: '\2714';
     font-size: 0.625rem;
     color: white;
@@ -840,7 +864,8 @@ hr { /* 来自next主题样式 */
     background-color: var(--taskfocus-color);
     line-height: .8rem;
 }
-.md-task-list-item:before{
+
+.md-task-list-item:before {
     content: none !important;
 }
 
@@ -856,11 +881,10 @@ hr { /* 来自next主题样式 */
 /** 导出html文件，修复流程图在手机端高度太大的问题 **/
 
 
-.md-diagram-panel svg{
+.md-diagram-panel svg {
     max-width: inherit !important;
     height: inherit !important;
 }
-
 
 
 /* @media print {
@@ -891,31 +915,30 @@ hr { /* 来自next主题样式 */
     margin-top: 0 !important;
 }
 
-.mathjax-block>.code-tooltip {
+.mathjax-block > .code-tooltip {
     bottom: .375rem;
     /* bottom: .575rem; */
 }
 
-#write>h3.md-focus:before {
+#write > h3.md-focus:before {
     left: -1.5625rem;
     top: .375rem;
 }
 
-#write>h4.md-focus:before {
+#write > h4.md-focus:before {
     left: -1.5625rem;
     top: .285714286rem;
 }
 
-#write>h5.md-focus:before {
+#write > h5.md-focus:before {
     left: -1.5625rem;
     top: .285714286rem;
 }
 
-#write>h6.md-focus:before {
+#write > h6.md-focus:before {
     left: -1.5625rem;
     top: .285714286rem;
 }
-
 
 
 /** 图片 **/
@@ -924,6 +947,7 @@ hr { /* 来自next主题样式 */
 .md-image {
     margin: 24px auto; /* 图片上下边距24像素 */
 }
+
 .md-image img {
     border-radius: 4px;
 }
@@ -939,29 +963,29 @@ hr { /* 来自next主题样式 */
 
 /* 模糊特效 */
 .md-image img[alt|='blur'] {
-    filter:blur(6px);
-    -webkit-filter:blur(6px);
-    -moz-filter:blur(6px);
-    -ms-filter:blur(6px);
-    -o-filter:blur(6px);
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -ms-filter: blur(6px);
+    -o-filter: blur(6px);
     transition: all 0.2s linear;
 }
+
 .md-image img[alt|='blur']:hover {
-    filter:none;
-    -webkit-filter:none;
-    -moz-filter:none;
-    -ms-filter:none;
-    -o-filter:none;
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
 }
 
-.md-image>.md-meta {
+.md-image > .md-meta {
     border-radius: 3px;
     font-family: var(--body-font);
     padding: 2px 0 0 4px;
     font-size: 0.9em;
     color: inherit;
 }
-
 
 
 .md-tag {
@@ -1005,6 +1029,7 @@ footer {
 .file-node-content:hover .file-node-open-state {
     visibility: visible;
 }
+
 /*
 .mac-seamless-mode #typora-sidebar {
     background-color: var(--side-bar-bg-color);
@@ -1037,28 +1062,33 @@ footer {
     .typora-export * {
         -webkit-print-color-adjust: exact;
     }
+
     html {
-        font-size: 16px!important;
+        font-size: 16px !important;
     }
+
     body {
-        font-family: Times, 'SimSun', serif!important;
-        color: #000000!important;
+        font-family: Times, 'SimSun', serif !important;
+        color: #000000 !important;
     }
+
     p {
-        color: #000000!important;
+        color: #000000 !important;
     }
+
     table,
     pre {
         page-break-inside: avoid;
     }
+
     pre {
         word-wrap: break-word;
     }
-    .MathJax_SVG_Display svg{
+
+    .MathJax_SVG_Display svg {
         max-width: 100% !important;
     }
 }
-
 
 
 /** 有序、无序列表，来自Butterfly主题 **/
@@ -1067,17 +1097,19 @@ footer {
 #write ul li, #write ol li, #write .ul .li, #write .ol .li {
     list-style-type: none;
 }
-#write ul>li:not(.tab):before, #write .ul>.li:not(.tab):before {
-    margin-left: -22px;
+
+#write ul > li:not(.tab):before, #write .ul > .li:not(.tab):before {
+    margin-left: -17px;
     margin-top: 9px;
-    width: .62em;
-    height: .62em;
+    width: .5em;
+    height: .5em;
     border: .1em solid var(--ulol-color); /* #81d8cf */
-    border-radius: .31em;
+    border-radius: 1em;
     background: 0 0;
     content: '';
     line-height: .42em;
 }
+
 #write ol li:before, #write ul li:before, #write .ol .li:before, #write .ul .li:before {
     position: absolute;
     background: var(--ulol-color); /* #81d8cf */
@@ -1089,30 +1121,34 @@ footer {
     -ms-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
+
 #write ol li:first-child, #write .ol .li:first-child { /* https://www.w3school.com.cn/cssref/pr_gen_counter-increment.asp */
     counter-reset: li;
 }
+
 #write ol li:hover:before, #write ul li:hover:before, #write .ol .li:hover:before, #write .ul .li:hover:before {
-    -webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
-    -ms-transform:rotate(360deg);
-    transform:rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
-#write ul>li:not(.tab):hover:before, #write .ul>.li:not(.tab):hover:before{
+
+#write ul > li:not(.tab):hover:before, #write .ul > .li:not(.tab):hover:before {
     border-color: var(--focus-color);
 }
-#write ol>li:before, #write .ol>.li:before {
+
+#write ol > li:before, #write .ol > .li:before {
     margin-top: 6px;
-    margin-left: -25px;
-    width: 1.65em;
-    height: 1.65em;
-    border-radius: 0.825em;
+    margin-left: -20px;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 1em;
     content: counter(li);
     counter-increment: li;
     text-align: center;
     font-size: .65em;
-    line-height: 1.7em;
+    line-height: 1.5em;
 }
 
 /* 列表子项上下间隔调整 */
@@ -1145,20 +1181,25 @@ font {
     border-radius: 6px;
     background-color: var(--spannote-color);
 }
+
 font[title="red"] {
-    background-color:#e91e64;
+    background-color: #e91e64;
 }
+
 font[title="blue"] {
-    background-color:#02aaf4;
+    background-color: #02aaf4;
 }
+
 font[title="yellow"] {
-    background-color:#ffc50a;
+    background-color: #ffc50a;
 }
+
 font[title="green"] {
-    background-color:#8bc34a;
+    background-color: #8bc34a;
 }
+
 font[title="gray"] {
-    background-color:#4c4c4c;
+    background-color: #4c4c4c;
 }
 
 
@@ -1168,9 +1209,11 @@ font[title="gray"] {
 span[alt='emp'] {
     border-bottom: 4px dotted var(--emptext-color);
 }
+
 span[alt='underline'] {
     border-bottom: 2px solid var(--emptext-color);
 }
+
 span[alt='wavy'] {
     text-decoration-style: wavy;
     text-decoration-line: underline;
@@ -1200,34 +1243,40 @@ details {
     /*border: 1px solid #f6f6f6;*/
     border: 1px solid #555555;
 }
+
 summary {
     display: list-item;
 }
+
 details summary {
     cursor: pointer;
     padding: 16px;
     margin: -16px;
     border-radius: 4px;
     color: var(--detailstxt-color);
-    font-size: .875rem!important;
+    font-size: .875rem !important;
     font-weight: 700;
     position: relative;
     line-height: normal;
 }
-details>summary {
+
+details > summary {
     background: var(--detailsbg-color);
 }
+
 details[open] {
     /*border-color: var(--detailsborder-color);*/
     border-color: #555555;
     background: #3c3f41;
 }
-details[open]>summary {
+
+details[open] > summary {
     /*color: #444;*/
     color: #ff5d52;
     margin-bottom: 0;
 }
-details[open]>summary {
+
+details[open] > summary {
     border-bottom: 1px solid var(--detailsborder-color);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -1235,13 +1284,15 @@ details[open]>summary {
 
 /* 折叠框、视频、音频标签点击时候会出现黑色边框，极不美观，去除 */
 summary:focus {
-	outline: none !important;
+    outline: none !important;
 }
-video:focus{
-	outline: none !important;
+
+video:focus {
+    outline: none !important;
 }
-audio:focus{
-	outline: none !important;
+
+audio:focus {
+    outline: none !important;
 }
 
 
@@ -1261,9 +1312,10 @@ span[alt="hide"] {
     -webkit-transition: all .28s ease;
     -o-transition: all .28s ease;
 }
+
 span[alt="hide"]:hover {
-    color:var(--hidetext-color);
-    background:0 0
+    color: var(--hidetext-color);
+    background: 0 0
 }
 
 
@@ -1271,18 +1323,20 @@ span[alt="hide"]:hover {
 
 
 @-webkit-keyframes rainbowan {
-	to {
-		background-position: -2000vw;
-	}
+    to {
+        background-position: -2000vw;
+    }
 }
+
 @keyframes rainbowan {
-	to {
-		background-position: -2000vw;
-	}
+    to {
+        background-position: -2000vw;
+    }
 }
+
 span[alt="rainbow"], span[alt="rainbow"] * {
     padding-top: 3px;
-    background-image: linear-gradient( to left, orangered, orange, gold, lightgreen, cyan, dodgerblue, mediumpurple, hotpink, orangered);
+    background-image: linear-gradient(to left, orangered, orange, gold, lightgreen, cyan, dodgerblue, mediumpurple, hotpink, orangered);
     background-size: 110vw;
     -webkit-background-clip: text;
     background-clip: text;
@@ -1305,7 +1359,7 @@ span[alt="modern"] {
     color: red;
     text-shadow: 0 8px 9px #c4b59d, 0 -2px 1px #fff;
     font-weight: 700;
-    background: linear-gradient(to bottom,#ece4d9 0,#e9dfd1 100%);
+    background: linear-gradient(to bottom, #ece4d9 0, #e9dfd1 100%);
 }
 
 
@@ -1320,17 +1374,20 @@ span[alt="btn"] {
     line-height: 1.1;
     border-radius: 2px;
 }
-#write span[alt="btn"] a{
+
+#write span[alt="btn"] a {
     color: var(--spanbtn-color);
-    border-bottom:none;
-    background-color:inherit;
+    border-bottom: none;
+    background-color: inherit;
     transition: none;
 }
+
 span[alt="btn"]:hover {
     color: var(--focus-color);
     border: 1px solid var(--focus-color);
 }
-#write span[alt="btn"]:hover a{
+
+#write span[alt="btn"]:hover a {
     color: var(--focus-color);
 }
 
@@ -1338,11 +1395,45 @@ span[alt="btn"]:hover {
 /** 抖音字效 **/
 
 
-@-webkit-keyframes uk-text-shadow-glitch{0%{text-shadow:none}25%{text-shadow:-1px -1px 0 #ff0048,1px 1px 0 #3234ff}50%{text-shadow:1px -1px 0 #ff0048,-1px 1px 0 #3234ff}75%{text-shadow:-1px 1px 0 #ff0048,1px -1px 0 #3234ff}to{text-shadow:1px 1px 0 #ff0048,-1px -1px 0 #3234ff}}@keyframes uk-text-shadow-glitch{0%{text-shadow:none}25%{text-shadow:-1px -1px 0 #ff0048,1px 1px 0 #3234ff}50%{text-shadow:1px -1px 0 #ff0048,-1px 1px 0 #3234ff}75%{text-shadow:-1px 1px 0 #ff0048,1px -1px 0 #3234ff}to{text-shadow:1px 1px 0 #ff0048,-1px -1px 0 #3234ff}}
+@-webkit-keyframes uk-text-shadow-glitch {
+    0% {
+        text-shadow: none
+    }
+    25% {
+        text-shadow: -1px -1px 0 #ff0048, 1px 1px 0 #3234ff
+    }
+    50% {
+        text-shadow: 1px -1px 0 #ff0048, -1px 1px 0 #3234ff
+    }
+    75% {
+        text-shadow: -1px 1px 0 #ff0048, 1px -1px 0 #3234ff
+    }
+    to {
+        text-shadow: 1px 1px 0 #ff0048, -1px -1px 0 #3234ff
+    }
+}
+
+@keyframes uk-text-shadow-glitch {
+    0% {
+        text-shadow: none
+    }
+    25% {
+        text-shadow: -1px -1px 0 #ff0048, 1px 1px 0 #3234ff
+    }
+    50% {
+        text-shadow: 1px -1px 0 #ff0048, -1px 1px 0 #3234ff
+    }
+    75% {
+        text-shadow: -1px 1px 0 #ff0048, 1px -1px 0 #3234ff
+    }
+    to {
+        text-shadow: 1px 1px 0 #ff0048, -1px -1px 0 #3234ff
+    }
+}
 
 span[alt="shake"] {
-    -webkit-animation: uk-text-shadow-glitch .95s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
-    animation: uk-text-shadow-glitch .95s cubic-bezier(1,-1.91,0,2.79) 0s infinite normal both running;
+    -webkit-animation: uk-text-shadow-glitch .95s cubic-bezier(1, -1.91, 0, 2.79) 0s infinite normal both running;
+    animation: uk-text-shadow-glitch .95s cubic-bezier(1, -1.91, 0, 2.79) 0s infinite normal both running;
 }
 
 
@@ -1488,8 +1579,8 @@ span[alt="shake"] {
 改为如下：
 */
 .CodeMirror-selected, .CodeMirror-selectedtext {
-    background: var(--select-text-bg-color)!important;
-    /*color: var(--select-text-font-color)!important;*/  /*注释掉这一行代码*/
+    background: var(--select-text-bg-color) !important;
+    /*color: var(--select-text-font-color)!important;*/ /*注释掉这一行代码*/
     text-shadow: none;
 }
 
@@ -1624,7 +1715,7 @@ kbd {
 /*}*/
 
 /*大纲-文件下的标题文本 选择*/
-.file-tree-node.active>.file-node-content {
+.file-tree-node.active > .file-node-content {
     color: #f44336;
 }
 
@@ -1661,7 +1752,7 @@ span.file-list-item-file-ext-part {
 /*}*/
 
 /*大纲定位标题 悬停*/
-li>:first-child:hover {
+li > :first-child:hover {
     margin-top: 0;
     color: #ffc107;
     background: var(--tablefocusrow-color);
@@ -1841,6 +1932,7 @@ code, pre, samp, tt {
     left: 0;
     color: #2196f3;
 }
+
 /*] 右边括号*/
 .md-def-name:after {
     font-weight: 400;
@@ -1917,8 +2009,8 @@ select, select option {
 
 /*退出按钮背景*/
 .btn-default {
-    border-color: rgba(204,204,204,.51);
-    background: rgba(204,204,204,.51);
+    border-color: rgba(204, 204, 204, .51);
+    background: rgba(204, 204, 204, .51);
 }
 
 /*源码标题*/
@@ -1926,9 +2018,6 @@ select, select option {
     color: #ff5722;
 }
 
-/*!*启用源码模式显示*!*/
-element.style {
-    display: flex;
-}
+
 
 
