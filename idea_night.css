@@ -72,7 +72,7 @@
     /*--para-color: #000000; !* 段落文本颜色（黑色） *!*/
     --para-color: #bacde2; /* 段落文本颜色（偏白） */
     /* dy font */
-    --body-font: 'Source Sans Pro', 'JetBrains Mono', '微软雅黑', 'Helvetica Neue', consoles, sans-serif; /* 全局字体 */
+    --body-font: 'Source Sans Pro', '微软雅黑', 'Helvetica Neue', consoles, sans-serif; /* 全局字体 */
     --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
 }
 
@@ -806,15 +806,24 @@ hr {
     box-sizing: content-box;
 }
 */
-hr { /* 来自next主题样式 */
-    background-image: repeating-linear-gradient(-45deg, var(--split-color), var(--split-color) 4px, transparent 4px, transparent 8px);
-    border: 0;
-    /*height: 3px;*/
-    height: 2px;
-    /*margin: 40px 0;*/
-    margin: 20px 0;
-}
+/*hr { !* 来自next主题样式 *!*/
+/*    background-image: repeating-linear-gradient(-45deg, var(--split-color), var(--split-color) 4px, transparent 4px, transparent 8px);*/
+/*    border: 0;*/
+/*    !*height: 3px;*!*/
+/*    height: 2px;*/
+/*    !*margin: 40px 0;*!*/
+/*    margin: 20px 0;*/
+/*}*/
 
+hr {
+    height: 1px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--split-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
 
 #write del {
     padding: 1px 2px;
@@ -1991,8 +2000,8 @@ span.md-block-like {
 /*页宽
 原页宽较窄，修改后宽度可铺满1920*1080的屏幕，通过修改max-width值即可。*/
 #write {
-    /*max-width: 1920px;*/
-    max-width: 720px;
+    max-width: 1920px;
+    /*max-width: 720px;*/
     margin: 0 auto;
     padding: 20px 30px 160px;
 }
@@ -2017,6 +2026,7 @@ select, select option {
 .cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property {
     color: #ff5722;
 }
+
 
 
 
