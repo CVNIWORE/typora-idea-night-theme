@@ -59,7 +59,7 @@
 
 ## 样式预览
 
-![](./temp/主题样式.png)
+![image-20211016005243375](readme.assets/image-20211016005243375.png)
 
 你可以在下载的“demo.md”中查阅以上内容，或者前往<a href="https://typora-dyzj-theme.vercel.app/">地址</a>在线预览
 
