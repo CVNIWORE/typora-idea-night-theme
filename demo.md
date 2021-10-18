@@ -545,17 +545,29 @@ pie
 
 ### 2.2.2 拷贝粘贴文件
 
+#### 2.2.2.1 base-control.css
+
 之所以要 拷贝 - 粘贴 这个文件，是解决一个官方未注意的小问题，代码块代码字体颜色被覆盖的问题。
 
 拷贝解压的 `base-control.css` 文件，进入 `Typora 安装目录\resources\style\ 路径`下（右键 Typora 桌面图标 - 打开文件所在位置 - 进入 resources 目录 - 进入 style 目录），可以`将原来的 base-control.css 备份`一下，（如：重命名为 `base-control.css_original`），粘贴之前解压的 `base-control.css` 文件即可。
+
+#### 2.2.2.2 Preferences.962926a4.caf99372.chunk.css
+
+同理，将 `Preferences.962926a4.caf99372.chunk.css` 文件，先==备份==，`拷贝` - `粘贴` 到  `Typora 安装目录\resources\page-dist\static\css\ 路径`下即可
 
 ### 2.2.3 打开主题文件夹
 
 `打开 Typora` --> `文件` -->  `偏好设置`（Ctrl + ，） --> `外观` --> `打开主题文件夹`（右侧主题栏） --> `拷贝解压后的文件和文件夹`，`粘贴到主题路径下`（即：粘贴到打开主题文件夹的当前路径） --> `退出并重启 Typora` --> 在`主题`菜单栏中，选择 `Idea Night` 主题
 
+# 3、主题效果
 
+**效果图 ①**
 
+![image-20211018222016273](demo.assets/image-20211018222016273.png)
 
+**效果图 ②**
+
+![image-20211018222323313](demo.assets/image-20211018222323313.png)
 
 [^1]:Typora 官方下载地址：https://typora.io/#download
 [^2]:Typora 官方官方支持文档：https://support.typora.io/

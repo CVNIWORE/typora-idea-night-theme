@@ -6080,7 +6080,8 @@
 }
 
 @font-face {
-    font-family: "Font Awesome 5 Free";
+    /*font-family: "Font Awesome 5 Free"*/
+    font-family: "FontAwesome";
     font-style: normal;
     font-weight: 400;
     font-display: block;
@@ -6093,7 +6094,8 @@
 }
 
 @font-face {
-    font-family: "Font Awesome 5 Free";
+    /*font-family: "Font Awesome 5 Free"*/
+    font-family: "FontAwesome";
     font-style: normal;
     font-weight: 900;
     font-display: block;
@@ -6102,9 +6104,11 @@
 }
 
 .fa, .far, .fas {
-    font-family: "Font Awesome 5 Free"
+    /*font-family: "Font Awesome 5 Free";*/
+    font-family: "FontAwesome";
 }
 
 .fa, .fas {
-    font-weight: 900
+    /*font-weight: 900;*/
+    font-weight: 800;
 }
