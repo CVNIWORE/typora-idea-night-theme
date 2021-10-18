@@ -1644,11 +1644,12 @@ kbd {
 
 /*修改偏好设置-导出-选项面板背景颜色
 路径：安装路径\Typora\resources\page-dist\static\css --> Preferences.962926a4.caf99372.chunk.css
-修改该文件的 background 属性，改为如下：background: #3c3f41;
+搜索 .export-detail,.export-item.active,.export-items-list-control 修改 background 属性
+修改 background 属性，改为如下：background: #3c3f41;
 */
 @media (prefers-color-scheme: dark) {
     .export-detail, .export-item.active, .export-items-list-control {
-        background: #3c3f41; /*修改此行代码*/
+        background: #3c3f41; /*修改此行代码，将 #70717d 值，改为 #3c3f41 值*/
     }
 
     textarea {
