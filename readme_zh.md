@@ -521,9 +521,15 @@ pie
 
 ## 2.1 下载主题
 
-SSH 链接：[git@github.com:CVNIWORE/typora-idea-night-theme.git](git@github.com:CVNIWORE/typora-idea-night-theme.git)
+主题源码链接：
 
-HTTPS 链接：[https://github.com/CVNIWORE/typora-idea-night-theme.git](https://github.com/CVNIWORE/typora-idea-night-theme.git)
+zip：[https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip](https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip)
+
+tar.gz：https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz
+
+主题压缩包链接：
+
+7z：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/IdeaNightThemePackage.7z](https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/IdeaNightThemePackage.7z)
 
 下载好后，解压
 
@@ -532,6 +538,10 @@ HTTPS 链接：[https://github.com/CVNIWORE/typora-idea-night-theme.git](https:/
 ### 2.2.1 安装字体
 
 ==建议安装==（应用到代码中，目前这两款字体还可以，这里仅针对 Windows 系统而言，Mac 的话自带的字体就很好看了）：
+
+字体下载链接：
+
+zip：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/ThreeFonts.zip](https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/ThreeFonts.zip)
 
 1. Source Sans Pro （Adobe 公司免费开源的一款创意设计方面的字体）
 2. JetBrains Mono （Jetbrains 公司专为开发者打造的免费开源编程字体）
