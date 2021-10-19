@@ -321,7 +321,38 @@ def decorator(func):
 ### 1.8.10 C++ 代码
 
 ```c++
-// C++ 单行注释#include <iostream>// C++ 多行注释#include <pthread.h> using namespace std; #define NUM_THREADS 5 // 线程的运行函数void* say_hello(void* args){    cout << "Hello Runoob！" << endl;    return 0;} int main(){    // 定义线程的 id 变量，多个变量使用数组    pthread_t tids[NUM_THREADS];    for(int i = 0; i < NUM_THREADS; ++i)    {        //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数        int ret = pthread_create(&tids[i], NULL, say_hello, NULL);        if (ret != 0)        {           cout << "pthread_create error: error_code=" << ret << endl;        }    }    //等各个线程退出后，进程才结束，否则进程强制结束了，线程可能还没反应过来；    pthread_exit(NULL);}
+// C++ 单行注释
+#include <iostream>
+// C++ 多行注释
+#include <pthread.h>
+ 
+using namespace std;
+ 
+#define NUM_THREADS 5
+ 
+// 线程的运行函数
+void* say_hello(void* args)
+{
+    cout << "Hello Runoob！" << endl;
+    return 0;
+}
+ 
+int main()
+{
+    // 定义线程的 id 变量，多个变量使用数组
+    pthread_t tids[NUM_THREADS];
+    for(int i = 0; i < NUM_THREADS; ++i)
+    {
+        //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
+        int ret = pthread_create(&tids[i], NULL, say_hello, NULL);
+        if (ret != 0)
+        {
+           cout << "pthread_create error: error_code=" << ret << endl;
+        }
+    }
+    //等各个线程退出后，进程才结束，否则进程强制结束了，线程可能还没反应过来；
+    pthread_exit(NULL);
+}
 ```
 
 ### 1.8.11 其它代码块
@@ -444,9 +475,15 @@ pie
 
 ## 2.1 下载主题
 
-SSH 链接：[git@github.com:CVNIWORE/typora-idea-night-theme.git](git@github.com:CVNIWORE/typora-idea-night-theme.git)
+主题源码链接：
 
-HTTPS 链接：[https://github.com/CVNIWORE/typora-idea-night-theme.git](https://github.com/CVNIWORE/typora-idea-night-theme.git)
+zip：[https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip](https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip)
+
+tar.gz：https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz
+
+主题压缩包链接：
+
+7z：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/IdeaNightThemePackage.7z](https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/IdeaNightThemePackage.7z)
 
 下载好后，解压
 
@@ -455,6 +492,10 @@ HTTPS 链接：[https://github.com/CVNIWORE/typora-idea-night-theme.git](https:/
 ### 2.2.1 安装字体
 
 ==建议安装==（应用到代码中，目前这两款字体还可以，这里仅针对 Windows 系统而言，Mac 的话自带的字体就很好看了）：
+
+字体下载链接：
+
+zip：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/ThreeFonts.zip](https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0/ThreeFonts.zip)
 
 1. Source Sans Pro （Adobe 公司免费开源的一款创意设计方面的字体）
 2. JetBrains Mono （Jetbrains 公司专为开发者打造的免费开源编程字体）
