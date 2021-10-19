@@ -1,6 +1,3 @@
-# typora-idea-night-theme
-typora-idea-night-theme
-
 # readme_zh
 
 **我的 Typora IDEA 雅黑主题**
@@ -8,6 +5,12 @@ typora-idea-night-theme
 [toc]
 
 # 1、主题概览
+
+**图片浏览**
+
+![readme_zh](readme_zh.assets/readme_zh.png)
+
+图片浏览结束，还有未展示的部分，自己下载、安装主题去发现吧。
 
 ## 1.1 目录
 
@@ -312,74 +315,19 @@ def decorator(func):
 ### 1.8.9 C 代码
 
 ```c
-// C 单行注释
-#include <stdio.h>
-void bubble_sort(int arr[], int len) {
-    int i, j, temp;
-    for (i = 0; i < len - 1; i++)
-        for (j = 0; j < len - 1 - i; j++)
-            if (arr[j] > arr[j + 1]) {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-}
-
-/** C 多行注释 */
-int main() {
-    int arr[] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };
-    int len = (int) sizeof(arr) / sizeof(*arr);
-    bubble_sort(arr, len);
-    int i;
-    for (i = 0; i < len; i++)
-        printf("%d ", arr[i]);
-    return 0;
-}
+// C 单行注释#include <stdio.h>void bubble_sort(int arr[], int len) {    int i, j, temp;    for (i = 0; i < len - 1; i++)        for (j = 0; j < len - 1 - i; j++)            if (arr[j] > arr[j + 1]) {                temp = arr[j];                arr[j] = arr[j + 1];                arr[j + 1] = temp;            }}/** C 多行注释 */int main() {    int arr[] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };    int len = (int) sizeof(arr) / sizeof(*arr);    bubble_sort(arr, len);    int i;    for (i = 0; i < len; i++)        printf("%d ", arr[i]);    return 0;}
 ```
 
 ### 1.8.10 C++ 代码
 
 ```c++
-// C++ 单行注释
-#include <iostream>
-// C++ 多行注释
-#include <pthread.h>
- 
-using namespace std;
- 
-#define NUM_THREADS 5
- 
-// 线程的运行函数
-void* say_hello(void* args)
-{
-    cout << "Hello Runoob！" << endl;
-    return 0;
-}
- 
-int main()
-{
-    // 定义线程的 id 变量，多个变量使用数组
-    pthread_t tids[NUM_THREADS];
-    for(int i = 0; i < NUM_THREADS; ++i)
-    {
-        //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
-        int ret = pthread_create(&tids[i], NULL, say_hello, NULL);
-        if (ret != 0)
-        {
-           cout << "pthread_create error: error_code=" << ret << endl;
-        }
-    }
-    //等各个线程退出后，进程才结束，否则进程强制结束了，线程可能还没反应过来；
-    pthread_exit(NULL);
-}
+// C++ 单行注释#include <iostream>// C++ 多行注释#include <pthread.h> using namespace std; #define NUM_THREADS 5 // 线程的运行函数void* say_hello(void* args){    cout << "Hello Runoob！" << endl;    return 0;} int main(){    // 定义线程的 id 变量，多个变量使用数组    pthread_t tids[NUM_THREADS];    for(int i = 0; i < NUM_THREADS; ++i)    {        //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数        int ret = pthread_create(&tids[i], NULL, say_hello, NULL);        if (ret != 0)        {           cout << "pthread_create error: error_code=" << ret << endl;        }    }    //等各个线程退出后，进程才结束，否则进程强制结束了，线程可能还没反应过来；    pthread_exit(NULL);}
 ```
 
 ### 1.8.11 其它代码块
 
 ```diff
-+ 新增行
-- 删除行
-其他行
++ 新增行- 删除行其他行
 ```
 
 ## 1.9 表格
@@ -415,20 +363,7 @@ int main()
 注：我这里是相对路径，音乐文件是本地音乐文件，嵌入外链似乎不得行
 
 ```html
-语法：
-<!-- 方式 ① -->
-<audio src="./本地音乐文件路径/xxx.mp3"></audio>
-
-<!-- 方式 ② -->
-<audio controls="controls">
-  <source src="./本地音乐文件路径/xxx.mp3" type="audio/mp3" />
-</audio>
-
-若需要居中显示，可以将 <audio> 音频包裹在<center></center> 中，如下所示：
-<center><audio src="./temp/她的微笑.mp3"></audio></center>
-    
-嵌入外链，语法大致是：//music.163.com/outchain/player?type=2&id=1342183925&auto=0 为外链音乐文件，我试了一下网易云，没能成功，播放不了
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1342183925&auto=0"></iframe>
+语法：<!-- 方式 ① --><audio src="./本地音乐文件路径/xxx.mp3"></audio><!-- 方式 ② --><audio controls="controls">  <source src="./本地音乐文件路径/xxx.mp3" type="audio/mp3" /></audio>若需要居中显示，可以将 <audio> 音频包裹在<center></center> 中，如下所示：<center><audio src="./temp/她的微笑.mp3"></audio></center>    嵌入外链，语法大致是：//music.163.com/outchain/player?type=2&id=1342183925&auto=0 为外链音乐文件，我试了一下网易云，没能成功，播放不了<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1342183925&auto=0"></iframe>
 ```
 
 <audio src="./temp/她的微笑.mp3"></audio>
@@ -440,8 +375,7 @@ int main()
 ### 1.12.2 嵌入视频
 
 ```html
-语法：
-<video src="./本地视频文件路径/xxx.mp4"></video>
+语法：<video src="./本地视频文件路径/xxx.mp4"></video>
 ```
 
 <video src="./temp/航拍风景.mp4"></video>
@@ -451,17 +385,7 @@ int main()
 语法：
 
 ```html
-<details>
-    <summary>折叠标签</summary>
-    <!-- 折叠标签内容 -->
-      越人歌
-    佚名 〔先秦〕
-    今夕何夕兮，搴舟中流。
-    今日何日兮，得与王子同舟。
-    蒙羞被好兮，不訾诟耻。
-    心几烦而不绝兮，得知王子。
-    山有木兮木有枝，心悦君兮君不知。
-</details>
+<details>    <summary>折叠标签</summary>    <!-- 折叠标签内容 -->      越人歌    佚名 〔先秦〕    今夕何夕兮，搴舟中流。    今日何日兮，得与王子同舟。    蒙羞被好兮，不訾诟耻。    心几烦而不绝兮，得知王子。    山有木兮木有枝，心悦君兮君不知。</details>
 ```
 
 <details>
