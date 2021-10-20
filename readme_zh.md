@@ -409,7 +409,7 @@ int main()
 
 - 语法：`<img src="图片路径" style="zoom: 图片缩放比例%;" alt=""/>`（右键也可以缩放图片，任意缩放图片：style="zoom: 任意比例%，显示阴影：alt="shadow"，模糊：alt="blur"）
 
-<img src="./temp/04154_bayoffire_2560x1440.jpg" style="zoom: 67%;" alt=""/>
+<img src="readme_zh.assets/04154_bayoffire_2560x1440-16346581454151.jpg" style="zoom: 67%;" alt=""/>
 
 ## 1.12 嵌入音视频
 
@@ -445,6 +445,8 @@ int main()
 语法：
 <video src="./本地视频文件路径/xxx.mp4"></video>
 ```
+
+![image-20211019234651536](readme_zh.assets/image-20211019234651536.png)
 
 <video src="./temp/航拍风景.mp4"></video>
 
@@ -525,7 +527,7 @@ pie
 
 zip：[https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip](https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip)
 
-tar.gz：https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz
+tar.gz：[https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz](https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz)
 
 主题压缩包链接：
 
