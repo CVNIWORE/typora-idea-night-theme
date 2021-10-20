@@ -6,6 +6,10 @@
 
 # 1、主题概览
 
+我的 Typora 版本：`0.11.8`（beta）
+
+![image-20211020095944401](README.assets/image-20211020095944401.png)
+
 **图片浏览**
 
 ![readme_zh](readme_zh.assets/readme_zh.png)
