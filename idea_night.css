@@ -1543,6 +1543,27 @@ select, select option {
     color: #ff5722;
 }
 
+.cm-search-hit.CodeMirror-selectedtext, .md-search-hit.md-search-select, .md-search-select {
+    background: #214283;
+    border: 1px #bbbbbb solid;
+    /*color: var(--search-select-text-color);*/
+    text-shadow: none;
+}
+
+.md-search-hit {
+    background-color: #32593d;
+    border: 1px #3c704b solid;
+    contain: style;
+    transform: translate3d(0, 0, 0);
+}
+
+.cm-search-hit {
+    background-color: rgba(248, 192, 116, .3);
+    font-family: inherit !important;
+    border: 1px #3c704b solid;
+    background: #32593d;
+}
+
 
 
 
