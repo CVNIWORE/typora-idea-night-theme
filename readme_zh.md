@@ -12,8 +12,6 @@
 
 **图片浏览**
 
-
-
 <img src="readme_zh.assets/readme_zh.png" alt="readme_zh" style="zoom:100%;border:1px solid"/>
 
 图片浏览结束，还有未展示的部分，自己下载、安装主题去发现吧。
