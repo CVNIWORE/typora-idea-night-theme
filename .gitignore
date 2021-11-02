@@ -1,8 +1,11 @@
 # Default ignored files
-/.idea/shelf/
-/workspace.xml
+/shelf/
+/.idea/workspace.xml
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/IdeaNightThemePackage/
+*.7z
+*_back.css
