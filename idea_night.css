@@ -43,7 +43,7 @@
 }
 
 html {
-    font-size: 17px;
+    font-size: 14px;
 }
 
 body {
@@ -56,6 +56,15 @@ body {
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    tab-size: 4;
 }
 
 #write {
@@ -487,8 +496,9 @@ table tr:hover {
 
 #write .CodeMirror pre {
     font-family: var(--code-font);
-    font-size: 0.95em;
-    padding-left: 6px;
+    font-size: 12px;
+    padding-left: 5px;
+    letter-spacing: 0.1px;
 }
 
 .md-fences {
@@ -518,7 +528,7 @@ table tr:hover {
 #write code, div code {
     padding: 2px 4px;
     border-radius: 2px;
-    font-family: var(--code-font);
+    font-family: var(--body-font);
     font-size: 0.9rem;
     color: var(--code-color);
     background-color: var(--codebg-color);
@@ -786,10 +796,10 @@ footer {
 }
 
 #write ul > li:not(.tab):before, #write .ul > .li:not(.tab):before {
-    margin-left: -17px;
-    margin-top: 9px;
-    width: .5em;
-    height: .5em;
+    margin-left: -9px;
+    margin-top: 10px;
+    width: 6px;
+    height: 6px;
     border: .1em solid var(--ulol-color);
     border-radius: 1em;
     background: 0 0;
@@ -799,8 +809,8 @@ footer {
 
 #write ol li:before, #write ul li:before, #write .ol .li:before, #write .ul .li:before {
     position: absolute;
-    background: var(--ulol-color);
-    color: #fff;
+    background: #66696b;
+    color: #4caf50;
     cursor: pointer;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -827,15 +837,16 @@ footer {
 
 #write ol > li:before, #write .ol > .li:before {
     margin-top: 6px;
-    margin-left: -20px;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 1em;
+    margin-left: -14px;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
     content: counter(li);
     counter-increment: li;
     text-align: center;
-    font-size: .65em;
-    line-height: 1.5em;
+    font-size: 11px;
+    font-family: 'Source Sans Pro';
+    line-height: 11px;
 }
 
 #write ul li *, #write ol li *, #write .ul .li *, #write .ol .li * {
