@@ -6,6 +6,6 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-/IdeaNightThemePackage/
+/IdeaNightThemePackage/*
 *.7z
 *_back.css

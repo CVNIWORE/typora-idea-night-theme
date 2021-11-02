@@ -1747,8 +1747,8 @@ sup.md-footnote {
 }
 
 .cm-s-inner .cm-search-hit.CodeMirror-selected, .cm-s-inner .cm-search-hit.CodeMirror-selectedtext {
-    background: var(--search-select-bg-color) !important;
-    color: var(--search-select-text-color) !important
+    /*background: var(--search-select-bg-color) !important;*/
+    /*color: var(--search-select-text-color) !important*/
 }
 
 .CodeMirror-selected {
