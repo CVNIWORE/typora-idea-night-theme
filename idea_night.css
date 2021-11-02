@@ -100,7 +100,6 @@ body > *:last-child {
 
 #write a:hover {
     border-radius: 6px;
-    border-bottom: 2px solid transparent;
     cursor: pointer;
 }
 
@@ -810,7 +809,7 @@ footer {
 #write ol li:before, #write ul li:before, #write .ol .li:before, #write .ul .li:before {
     position: absolute;
     background: #66696b;
-    color: #4caf50;
+    color:  var(--body-color);
     cursor: pointer;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -845,7 +844,7 @@ footer {
     counter-increment: li;
     text-align: center;
     font-size: 11px;
-    font-family: 'Source Sans Pro';
+    font-family: var(--body-font);
     line-height: 11px;
 }
 
@@ -1397,7 +1396,7 @@ strong {
 }
 
 .md-inline-math script {
-    color: #66b175;
+    color: #2196f3;
 }
 
 .md-meta {
@@ -1406,7 +1405,7 @@ strong {
 }
 
 mjx-container[jax="SVG"] > svg {
-    color: #45b97c;
+    color: #f44336;
     overflow: visible;
     min-height: 1px;
     min-width: 1px;
@@ -1417,7 +1416,7 @@ mjx-container[jax="SVG"] > svg {
     opacity: .95;
     margin-top: -2px;
     line-height: 1.2em;
-    text-align: center;
+    text-align: left;
     background: #3c3f41;
 }
 
