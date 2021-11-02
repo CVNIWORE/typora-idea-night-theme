@@ -84,7 +84,6 @@ body > *:last-child {
 }
 
 #write a {
-    /*border-bottom: 2px solid var(--abottom-color);*/
     padding: 0 4px;
     transition: .3s;
     text-decoration: none;
