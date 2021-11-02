@@ -12,7 +12,9 @@
 
 **图片浏览**
 
-![readme_zh](readme_zh.assets/readme_zh.png
+
+
+<img src="readme_zh.assets/readme_zh.png" alt="readme_zh" style="zoom:100%;border:1px solid"/>
 
 图片浏览结束，还有未展示的部分，自己下载、安装主题去发现吧。
 
@@ -415,7 +417,7 @@ int main()
 
 - 语法：`<img src="图片路径" style="zoom: 图片缩放比例%;" alt=""/>`（右键也可以缩放图片，任意缩放图片：style="zoom: 任意比例%，显示阴影：alt="shadow"，模糊：alt="blur"）
 
-<img src="readme_zh.assets/04154_bayoffire_2560x1440-16346581454151.jpg" style="zoom: 67%;" alt=""/>
+<img src="readme_zh.assets/04154_bayoffire_2560x1440-16346581454151.jpg" style="zoom: 67%;border:0px red solid" alt=""/>
 
 ## 1.12 嵌入音视频
 
