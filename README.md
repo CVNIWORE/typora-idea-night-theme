@@ -6,13 +6,17 @@
 
 # 1、主题概览
 
-我的 Typora 版本：`0.11.8`（beta）
+==当前最新版本==：`0.11.17`（beta）
 
-![image-20211020095944401](README.assets/image-20211020095944401.png)
+![image-20211115103433379](readme_zh.assets/image-20211115103433379.png)
+
+==Typora 历史版本==：`0.11.8`（beta）
+
+![image-20211020095944401](readme_zh.assets/image-20211020095944401.png)
 
 **图片浏览**
 
-![readme_zh](readme_zh.assets/readme_zh.png)
+![image-20211115104216413](readme_zh.assets/image-20211115104216413.png)
 
 图片浏览结束，还有未展示的部分，自己下载、安装主题去发现吧。
 
@@ -28,13 +32,15 @@
 
 ## 1.2 六级标题
 
-> 左对齐，居中对齐感觉有点别扭，去掉下方横线，逐级减小，左侧有几级标题提示（小提示：便于知道下一个标题该写几级标题）
->
-> - 语法：`#`、`##`、`###` ... （几级标题，就几个 **#** 号）
->
-> - 常规：![image-20211015203712500](readme_zh.assets/image-20211015203712500.png)
-> - 源码格式：![image-20211015203732914](readme_zh.assets/image-20211015203732914.png)
-> - 快捷键：`Ctrl + 1~6`
+左对齐，居中对齐感觉有点别扭，去掉下方横线，逐级减小，左侧有几级标题提示（小提示：便于知道下一个标题该写几级标题）
+
+语法：`#`、`##`、`###` ... （几级标题，就几个 **#** 号）
+
+常规：![image-20211015203712500](readme_zh.assets/image-20211015203712500.png)
+
+源码格式：![image-20211015203732914](readme_zh.assets/image-20211015203732914.png)
+
+快捷键：`Ctrl + 1~6`
 
 ![image-20211015203034729](readme_zh.assets/image-20211015203034729.png)
 
@@ -71,11 +77,11 @@
 ![image-20211015205030269](readme_zh.assets/image-20211015205030269.png)
 
 1. 内联公式：$\lim\limits_{x \to \infty} \exp(-x)=0$
-   - 语法：`$公式$` ，输入前面一个 `$`，输入公式，即可自动生成公式
-   - 格式 - 内联公式，也可自定义快捷键
+    - 语法：`$公式$` ，输入前面一个 `$`，输入公式，即可自动生成公式
+    - 格式 - 内联公式，也可自定义快捷键
 2. 公式块：（默认居中显示）
-   - 语法：`$$公式$$`，输入前两个 `$$` + Enter，输入公式，即可自动生成公式
-   - 快捷键：`Ctrl + Shift + M`
+    - 语法：`$$公式$$`，输入前两个 `$$` + Enter，输入公式，即可自动生成公式
+    - 快捷键：`Ctrl + Shift + M`
 
 $$
 E_0 = mc^2 \\
@@ -97,8 +103,8 @@ $$
 > 缩进一级/回退一级：快捷键 `Ctrl` + `]`，`Ctrl` + `[`
 
 1. 有序列表1
-   1. 下一级有序列表2
-   2. 下一级有序列表2
+    1. 下一级有序列表2
+    2. 下一级有序列表2
 2. 同级有序列表1
 
 ### 1.6.2 无序列表
@@ -110,9 +116,9 @@ $$
 > 缩进一级/回退一级：快捷键 `Ctrl` + `]`，`Ctrl` + `[`
 
 - 无序列表1
-  - 下一级无序列表2
-    - 下一级无序列表3
-    - 下一级无序列表3
+    - 下一级无序列表2
+        - 下一级无序列表3
+        - 下一级无序列表3
 
 - 同级无序列表1
 
@@ -319,7 +325,29 @@ def decorator(func):
 ### 1.8.9 C 代码
 
 ```c
-// C 单行注释#include <stdio.h>void bubble_sort(int arr[], int len) {    int i, j, temp;    for (i = 0; i < len - 1; i++)        for (j = 0; j < len - 1 - i; j++)            if (arr[j] > arr[j + 1]) {                temp = arr[j];                arr[j] = arr[j + 1];                arr[j + 1] = temp;            }}/** C 多行注释 */int main() {    int arr[] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };    int len = (int) sizeof(arr) / sizeof(*arr);    bubble_sort(arr, len);    int i;    for (i = 0; i < len; i++)        printf("%d ", arr[i]);    return 0;}
+// C 单行注释
+#include <stdio.h>
+void bubble_sort(int arr[], int len) {
+    int i, j, temp;
+    for (i = 0; i < len - 1; i++)
+        for (j = 0; j < len - 1 - i; j++)
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+}
+
+/** C 多行注释 */
+int main() {
+    int arr[] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };
+    int len = (int) sizeof(arr) / sizeof(*arr);
+    bubble_sort(arr, len);
+    int i;
+    for (i = 0; i < len; i++)
+        printf("%d ", arr[i]);
+    return 0;
+}
 ```
 
 ### 1.8.10 C++ 代码
@@ -362,7 +390,9 @@ int main()
 ### 1.8.11 其它代码块
 
 ```diff
-+ 新增行- 删除行其他行
++ 新增行
+- 删除行
+其他行
 ```
 
 ## 1.9 表格
@@ -377,11 +407,11 @@ int main()
 ## 1.10 上下标
 
 1. 上标：e^2^，e^x^
-   - 语法：`x^上标^` （x：任意字符、文本，上标也可以是任意字符、文本）
+    - 语法：`x^上标^` （x：任意字符、文本，上标也可以是任意字符、文本）
 2. 下标：H~2~，O~2~，H~2~O，H~52~O~12\ 22\ 78~ （若下标是多个单词或字符，需使用 `\` 转义空格，显示特殊字符一般都需要反斜杠 `\` 转义）
-   - 语法：`x~下标1\ 下标2~` （x：任意字符、文本，上标也可以是任意字符、文本）
-3. 拼音文字：（很少使用，没啥用）下方文字 (上方文字) <ruby>下方文字<rp> (</rp><rt>上方文字</rt><rp>) </rp></ruby>、拼音文字 (Pīn yīn wén zì) <ruby>拼音文字<rp> (</rp><rt>Pīn yīn wén zì</rt><rp>) </rp></ruby>、没卵用 (使い物にならない) <ruby>没卵用<rp> (</rp><rt>使い物にならない</rt><rp>) </rp></ruby>
-   - 语法：`<ruby>拼音文字<rp> (</rp><rt>Pīn yīn wén zì</rt><rp>) </rp></ruby>`（原理：就是两种文字叠加，没卵用）
+    - 语法：`x~下标1\ 下标2~` （x：任意字符、文本，上标也可以是任意字符、文本）
+3. 拼音文字：（很少使用，没啥用）<ruby>下方文字<rp> (</rp><rt>上方文字</rt><rp>) </rp></ruby>、<ruby>拼音文字<rp> (</rp><rt>Pīn yīn wén zì</rt><rp>) </rp></ruby>、<ruby>没卵用<rp> (</rp><rt>使い物にならない</rt><rp>) </rp></ruby>
+    - 语法：`<ruby>拼音文字<rp> (</rp><rt>Pīn yīn wén zì</rt><rp>) </rp></ruby>`（原理：就是两种文字叠加，没卵用）
 
 ## 1.11 图片
 
@@ -389,7 +419,7 @@ int main()
 
 - 语法：`<img src="图片路径" style="zoom: 图片缩放比例%;" alt=""/>`（右键也可以缩放图片，任意缩放图片：style="zoom: 任意比例%，显示阴影：alt="shadow"，模糊：alt="blur"）
 
-<img src="./temp/04154_bayoffire_2560x1440.jpg" style="zoom: 67%;" alt=""/>
+<img src="readme_zh.assets/04154_bayoffire_2560x1440-16346581454151.jpg" style="zoom: 67%;border:0px red solid" alt=""/>
 
 ## 1.12 嵌入音视频
 
@@ -398,29 +428,55 @@ int main()
 注：我这里是相对路径，音乐文件是本地音乐文件，嵌入外链似乎不得行
 
 ```html
-语法：<!-- 方式 ① --><audio src="./本地音乐文件路径/xxx.mp3"></audio><!-- 方式 ② --><audio controls="controls">  <source src="./本地音乐文件路径/xxx.mp3" type="audio/mp3" /></audio>若需要居中显示，可以将 <audio> 音频包裹在<center></center> 中，如下所示：<center><audio src="./temp/她的微笑.mp3"></audio></center>    嵌入外链，语法大致是：//music.163.com/outchain/player?type=2&id=1342183925&auto=0 为外链音乐文件，我试了一下网易云，没能成功，播放不了<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1342183925&auto=0"></iframe>
+语法：
+<!-- 方式 ① -->
+<audio src="./本地音乐文件路径/xxx.mp3"></audio>
+
+<!-- 方式 ② -->
+<audio controls="controls">
+  <source src="./本地音乐文件路径/xxx.mp3" type="audio/mp3" />
+</audio>
+
+若需要居中显示，可以将 <audio> 音频包裹在<center></center> 中，如下所示：
+<center><audio src="./temp/她的微笑.mp3"></audio></center>
+    
+嵌入外链，语法大致是：//music.163.com/outchain/player?type=2&id=1342183925&auto=0 为外链音乐文件，我试了一下网易云，没能成功，播放不了
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1342183925&auto=0"></iframe>
 ```
 
-<audio src="./temp/她的微笑.mp3"></audio>
+<audio src="./temp/她的微笑.mp3"> </audio>
 
-<audio controls="controls">
+<audio controls="controls"> 
   <source src="./temp/你能不能不要离开我 (莫叫语版)-莫叫姐姐.mp3" type="audio/mp3" />
 </audio>
 
 ### 1.12.2 嵌入视频
 
 ```html
-语法：<video src="./本地视频文件路径/xxx.mp4"></video>
+语法：
+<video src="./本地视频文件路径/xxx.mp4"></video>
 ```
 
-<video src="./temp/航拍风景.mp4"></video>
+![image-20211019234651536](readme_zh.assets/image-20211019234651536.png)
+
+<video src="./temp/航拍风景.mp4"> </video>
 
 ### 1.12.3 折叠标签
 
 语法：
 
 ```html
-<details>    <summary>折叠标签</summary>    <!-- 折叠标签内容 -->      越人歌    佚名 〔先秦〕    今夕何夕兮，搴舟中流。    今日何日兮，得与王子同舟。    蒙羞被好兮，不訾诟耻。    心几烦而不绝兮，得知王子。    山有木兮木有枝，心悦君兮君不知。</details>
+<details>
+    <summary>折叠标签</summary>
+    <!-- 折叠标签内容 -->
+      越人歌
+    佚名 〔先秦〕
+    今夕何夕兮，搴舟中流。
+    今日何日兮，得与王子同舟。
+    蒙羞被好兮，不訾诟耻。
+    心几烦而不绝兮，得知王子。
+    山有木兮木有枝，心悦君兮君不知。
+</details>
 ```
 
 <details>
@@ -432,7 +488,6 @@ int main()
     心几烦而不绝兮，得知王子。
     山有木兮木有枝，心悦君兮君不知。
 </details>
-
 
 **更多关于Typora对HTML的支持，请看官方文档**：[https://support.typora.io/HTML/](https://support.typora.io/HTML/)
 
@@ -473,8 +528,6 @@ pie
 
 因我习惯看 4k 或 2k 屏，所以，设置为了 1920 * 1080，若不需要页面宽一点儿的话，也可以设置小一点，比如：720 px 就可以，或者 将 #wite 给注释了也行，这样的话，就是默认值了，即没修改的状态。默认值估计在 640 px 或 720 px 附近，因我没去仔细测试，但我简单看了一下，大概在这个区间波动。
 
-
-
 # 2、主题安装
 
 ## 2.1 下载主题
@@ -483,7 +536,7 @@ pie
 
 zip：[https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip](https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.zip)
 
-tar.gz：https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz
+tar.gz：[https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz](https://github.com/CVNIWORE/typora-idea-night-theme/archive/refs/tags/1.0.tar.gz)
 
 主题压缩包链接：
 
@@ -543,7 +596,7 @@ zip：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0
 
 ### 2.2.3 打开主题文件夹
 
-`打开 Typora` --> `文件` -->  `偏好设置`（Ctrl + ，） --> `外观` --> `打开主题文件夹`（右侧主题栏） --> `拷贝解压后的文件和文件夹`，`粘贴到主题路径下`（即：粘贴到打开主题文件夹的当前路径） --> `退出并重启 Typora` --> 在`主题`菜单栏中，选择 `Idea Night` 主题
+`打开 Typora` --> `文件` -->  `偏好设置`（Ctrl + ，） --> `外观` --> `打开主题文件夹`（右侧主题栏） --> `拷贝解压后的文件和文件夹`，`粘贴到主题路径下`（即：粘贴到打开主题文件夹的当前路径，如：`C:\Users\用户目录\AppData\Roaming\Typora\themes`） --> `退出并重启 Typora` --> 在`主题`菜单栏中，选择 `Idea Night` 主题
 
 ## 2.3 设置主题
 
@@ -551,78 +604,92 @@ zip：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0
 
 1. 通用
 
-   - 保存&恢复：勾选`自动保存`（手动保存一是麻烦，二是突发情况易丢失数据文件等）
-   - 更新：取消勾选 `自动检查更新`，一般要安装新版本，我习惯自己去官网重新下载，卸载旧版本后再安装新版本，这样，装哪，怎么配置等自己心里有数，默认自动更新安装，心里没数，不知道它悄悄动了哪些东西。
-   - 快捷键：自定义快捷键（可以自己定义，这里不作过多说明）
-   - 高级设置：
-     - 取消勾选 `发送匿名使用数据`
-     - 打开高级设置（自己爱设置就设置）
+    - 保存&恢复：勾选`自动保存`（手动保存一是麻烦，二是突发情况易丢失数据文件等）
+    - 更新：取消勾选 `自动检查更新`，一般要安装新版本，我习惯自己去官网重新下载，卸载旧版本后再安装新版本，这样，装哪，怎么配置等自己心里有数，默认自动更新安装，心里没数，不知道它悄悄动了哪些东西。
+    - 快捷键：自定义快捷键（可以自己定义，这里不作过多说明）
+    - 高级设置：
+        - 取消勾选 `发送匿名使用数据`
+        - 打开高级设置（自己爱设置就设置）
 
 2. 外观
 
-   - 窗口：经典
-   - 字体大小：自定义 `16` px （因我安装了 Source Sans Pro、JetBrains Mono 字体，感觉16 px 正合适，这个看你自己，根据自己的实际情况而定）
-   - 状态栏：显示状态栏
-   - 侧边栏：勾选 `侧边栏的大纲视图允许折叠和展开`
-   - 主题：
-     - 选项中的主题，就是当前使用的主题
-     - 打开主题文件夹，这里一般自定义修改主题、调试主题时，会经常用到
-     - 获取主题：就是官网附属的那些主题，个人觉得，没一个适合自己的
+    - 窗口：经典
+    - 字体大小：自定义 `16` px （因我安装了 Source Sans Pro、JetBrains Mono 字体，感觉16 px 正合适，这个看你自己，根据自己的实际情况而定）
+    - 状态栏：显示状态栏
+    - 侧边栏：勾选 `侧边栏的大纲视图允许折叠和展开`
+    - 主题：
+        - 选项中的主题，就是当前使用的主题
+        - 打开主题文件夹，这里一般自定义修改主题、调试主题时，会经常用到
+        - 获取主题：就是官网附属的那些主题，个人觉得，没一个适合自己的
 
 3. 编辑器
 
-   - 使用成对的符号：
-     - 勾选 `匹配括号和引号`（一般成对书写较好些）
-     - 勾选 `匹配 Markdown 字符`（更加便于书写 markdown 的文章）
-   - 即时渲染：勾选 `显示当前块元素的 Markdown 源码`（编辑时，可以方便快速查看源码）
-   - 拼写检查：选择 `不使用拼写检查`（我不太习惯有拼写检查，若自己可以接受，也可以开启自动检查）
+    - 使用成对的符号：
+        - 勾选 `匹配括号和引号`（一般成对书写较好些）
+        - 勾选 `匹配 Markdown 字符`（更加便于书写 markdown 的文章）
+    - 即时渲染：勾选 `显示当前块元素的 Markdown 源码`（编辑时，可以方便快速查看源码）
+    - 拼写检查：选择 `不使用拼写检查`（我不太习惯有拼写检查，若自己可以接受，也可以开启自动检查）
 
 4. 图像
 
-   - 插入图片时：
+    - 插入图片时：
 
-     - 选择 `复制图片到 ./${filename}.assets 文件夹`（我一般都选它，它会将文章中所有图片存放在一个 xxx.assets 的文件夹中，方便统一管理图片。默认在 C 盘，当然也可以自定义存放图片目录路径）
-     - 勾选 `对本地位置的图片应用上述规则`
-     - 勾选 `对网络位置的图片应用上述规则`
-     - 勾选 `优先使用相对路径`
+        - 选择 `复制图片到 ./${filename}.assets 文件夹`（我一般都选它，它会将文章中所有图片存放在一个 xxx.assets 的文件夹中，方便统一管理图片。默认在 C 盘，当然也可以自定义存放图片目录路径）
+        - 勾选 `对本地位置的图片应用上述规则`
+        - 勾选 `对网络位置的图片应用上述规则`
+        - 勾选 `优先使用相对路径`
 
-     - 允许根据 YAML 设置自动上传图片（这个若需要上传图片，可以开启，不需要，就不勾选）
-     - 插入时自动转义图片URL（这个也是若需要转义，就转义，不需要，就不勾选）
+        - 允许根据 YAML 设置自动上传图片（这个若需要上传图片，可以开启，不需要，就不勾选）
+        - 插入时自动转义图片URL（这个也是若需要转义，就转义，不需要，就不勾选）
 
-   - 上传服务设定
+    - 上传服务设定
 
-     - 上传服务：需要上传服务，自己开启一种方式即可
+        - 上传服务：需要上传服务，自己开启一种方式即可
 
 5. Markdown
 
-   - Markdown 扩展语法
-     - 内联公式：勾选 `内联公式`
-     - 勾选 `下标`
-     - 勾选 `上标`
-     - 勾选 `高亮`
-     - 勾选 `图表`
-   - 代码块
-     - 勾选 `显示行号`
-     - 勾选 `代码块自动换行`
+    - Markdown 扩展语法
+        - 内联公式：勾选 `内联公式`
+        - 勾选 `下标`
+        - 勾选 `上标`
+        - 勾选 `高亮`
+        - 勾选 `图表`
+    - 代码块
+        - 勾选 `显示行号`
+        - 勾选 `代码块自动换行`
 
    基本设置就这些，一切还是要根据自己的实际情况、个人爱好、习惯等，具体配置。
 
-发现一个 ==BUG==：
+发现一个 `0.11.8`版本的  ==BUG==【注：`0.11.17` 版本已修复，建议下载当前最新版本：`0.11.17`】：
 
 - 在 `文件` --> `偏好设置` --> 设置面板左上角，==查找搜索框无法使用==，一旦输入查找内容，设置面板就空白一片，什么也没有，设置面板就无法使用，必须重启 Typora，才能使用设置面板，但仍然无法使用设置面板的查找功能，一旦使用，就会陷入死循环，必须重启 Typora 软件。
 - 建议：暂时不要去使用 设置面板的查找功能（一般也不会去使用，影响不大）。
 
 # 3、主题效果
 
-**效果图 ①**
+**效果图**
+
+==当前最新版本==：`0.11.17`
+
+![image-20211115101108758](readme_zh.assets/image-20211115101108758.png)
+
+![image-20211115101304223](readme_zh.assets/image-20211115101304223.png)
+
+---
+
+==历史版本==：`0.11.8`
 
 ![image-20211018222016273](readme_zh.assets/image-20211018222016273.png)
 
-**效果图 ②**
-
 ![image-20211018222323313](readme_zh.assets/image-20211018222323313.png)
 
-[^1]: Typora 官方下载地址：https://typora.io/#download
-[^2]: Typora 官方官方支持文档：https://support.typora.io/
-[^3]: Typora 官网附属的一些主题：https://theme.typora.io/
+[^1]:Typora 官方下载地址：https://typora.io/#download
+[^2]:Typora 官方官方支持文档：https://support.typora.io/
+[^3]:Typora 官网附属的一些主题：https://theme.typora.io/
+
+# 4、更新
+
+当前最新版本：`0.11.17` 修复设置面板搜索空白 bug，其它无大的改动
+
+历史版本：`0.11.8` 设置面板搜索栏有空白 bug
 
