@@ -662,15 +662,29 @@ zip：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0
 
 # 3、主题效果
 
-**效果图 ①**
+**效果图**
+
+==当前最新版本==：`0.11.17`
+
+![image-20211115101108758](readme_zh.assets/image-20211115101108758.png)
+
+![image-20211115101304223](readme_zh.assets/image-20211115101304223.png)
+
+---
+
+==历史版本==：`0.11.8`
 
 ![image-20211018222016273](readme_zh.assets/image-20211018222016273.png)
-
-**效果图 ②**
 
 ![image-20211018222323313](readme_zh.assets/image-20211018222323313.png)
 
 [^1]:Typora 官方下载地址：https://typora.io/#download
 [^2]:Typora 官方官方支持文档：https://support.typora.io/
 [^3]:Typora 官网附属的一些主题：https://theme.typora.io/
+
+# 4、更新
+
+当前最新版本：`0.11.17` 修复设置面板搜索空白 bug，其它无大的改动
+
+历史版本：`0.11.8` 设置面板搜索栏有空白 bug
 
