@@ -444,11 +444,12 @@ int main()
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1342183925&auto=0"></iframe>
 ```
 
-<audio src="./temp/她的微笑.mp3"></audio>
+<audio src="./temp/她的微笑.mp3"> </audio>
 
-<audio controls="controls">
+<audio controls="controls"> 
   <source src="./temp/你能不能不要离开我 (莫叫语版)-莫叫姐姐.mp3" type="audio/mp3" />
 </audio>
+
 ### 1.12.2 嵌入视频
 
 ```html
@@ -458,7 +459,7 @@ int main()
 
 ![image-20211019234651536](readme_zh.assets/image-20211019234651536.png)
 
-<video src="./temp/航拍风景.mp4"></video>
+<video src="./temp/航拍风景.mp4"> </video>
 
 ### 1.12.3 折叠标签
 
@@ -595,7 +596,7 @@ zip：[https://github.com/CVNIWORE/typora-idea-night-theme/releases/download/1.0
 
 ### 2.2.3 打开主题文件夹
 
-`打开 Typora` --> `文件` -->  `偏好设置`（Ctrl + ，） --> `外观` --> `打开主题文件夹`（右侧主题栏） --> `拷贝解压后的文件和文件夹`，`粘贴到主题路径下`（即：粘贴到打开主题文件夹的当前路径） --> `退出并重启 Typora` --> 在`主题`菜单栏中，选择 `Idea Night` 主题
+`打开 Typora` --> `文件` -->  `偏好设置`（Ctrl + ，） --> `外观` --> `打开主题文件夹`（右侧主题栏） --> `拷贝解压后的文件和文件夹`，`粘贴到主题路径下`（即：粘贴到打开主题文件夹的当前路径，如：`C:\Users\用户目录\AppData\Roaming\Typora\themes`） --> `退出并重启 Typora` --> 在`主题`菜单栏中，选择 `Idea Night` 主题
 
 ## 2.3 设置主题
 
