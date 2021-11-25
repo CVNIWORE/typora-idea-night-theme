@@ -1573,7 +1573,13 @@ select, select option {
     background: #32593d;
 }
 
+p.md-end-block.md-p,span.md-image.md-img-loaded.md-expand {
+    margin: 1px 0px;
+    border: 1px;
+    padding: 1px;
+}
 
-
-
+.md-image.md-img-loaded.md-expand,span.md-meta.md-before.md-content{
+    z-index:-999;
+}
 
