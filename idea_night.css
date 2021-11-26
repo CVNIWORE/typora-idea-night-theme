@@ -1447,7 +1447,7 @@ mjx-container[jax="SVG"] > svg {
 
 .md-content, a:hover {
     color: #fe5f58;
-    background-color: #313335;
+    /*background-color: #313335;*/
 }
 
 .md-content, a:active {
@@ -1457,6 +1457,7 @@ mjx-container[jax="SVG"] > svg {
 
 .menu-item-container a.menu-style-btn {
     margin: 2px 0;
+    color: #4caf50;
     background: var(--active-file-border-color);
     cursor: pointer;
     border: none;
@@ -1583,3 +1584,6 @@ p.md-end-block.md-p,span.md-image.md-img-loaded.md-expand {
     z-index:-999;
 }
 
+li.divider {
+    color: var(--tableborder-color);
+}
