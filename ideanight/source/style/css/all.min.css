@@ -6076,7 +6076,8 @@
 }
 
 .fab {
-    font-family: "Font Awesome 5 Brands"
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
 }
 
 @font-face {
@@ -6090,7 +6091,7 @@
 }
 
 .fab, .far {
-    font-weight: 400
+    font-weight: 400;
 }
 
 @font-face {
@@ -6109,6 +6110,6 @@
 }
 
 .fa, .fas {
-    /*font-weight: 900;*/
-    font-weight: 800;
+    font-weight: 900;
+    /*font-weight: 800;*/
 }

@@ -288,8 +288,8 @@
     font-style: normal;
     font-weight: 300;
     src: local('Source-Sans-Pro-Light-2.otf'),
-    url('Source-Sans-Pro-Light-2.otf') format('otf'), url('Source-Sans-Pro-LightIt-2.otf') format('otf'); /*新添加的*/
-url('6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2') format('woff2');
+    url('Source-Sans-Pro-Light-2.otf') format('otf'), url('Source-Sans-Pro-LightIt-2.otf') format('otf'), /*新添加的*/
+    url('6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2') format('woff2');
     unicode-range: U+1F00-1FFF;
 }
 
@@ -309,8 +309,8 @@ url('6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2') format('woff2');
     font-style: normal;
     font-weight: 300;
     src: local('Source-Sans-Pro-Light-2.otf'),
-    url('Source-Sans-Pro-Light-2.otf') format('otf'), url('Source-Sans-Pro-LightIt-2.otf') format('otf'); /*新添加的*/
-url('6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2') format('woff2');
+    url('Source-Sans-Pro-Light-2.otf') format('otf'), url('Source-Sans-Pro-LightIt-2.otf') format('otf'), /*新添加的*/
+    url('6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2') format('woff2'),
     unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
